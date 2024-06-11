@@ -1,0 +1,112 @@
+{
+  "works": [
+    {
+      "name": "EMCOMED",
+      "description": "Network Administrator & Backend Developer",
+      "tags": ["Server Linux & Windows", "PHP", "JQuery", "ReactJS", "NodeJS"]
+    },
+    {
+      "name": "DSPOT",
+      "description": "Frontend Developer",
+      "tags": ["ReactJS", "TypeScript", "NextJS", "Graphql", "Redux"]
+    },
+    {
+      "name": "TETRAIMPACT",
+      "description": "Frontend Developer",
+      "tags": ["TypeScript", "NextJS", "Graphql", "Material UI", "Zustand"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "HTML5",
+      "image": "icon-html5.svg",
+      "bgColor": "#f16a30"
+    },
+    {
+      "name": "CSS3",
+      "image": "icon-css3.svg",
+      "bgColor": "#00AFFF"
+    },
+    {
+      "name": "SASS",
+      "image": "icon-sass.svg",
+      "bgColor": "#ce6b9c"
+    },
+    {
+      "name": "Styles Component",
+      "bgColor": "#fea4db"
+    },
+    {
+      "name": "Tailwind",
+      "image": "icon-tailwind.svg",
+      "bgColor": "#3ebff8"
+    },
+    {
+      "name": "JavaScript",
+      "image": "icon-javascript.svg",
+      "bgColor": "#f7e025",
+      "color": "black"
+    },
+    {
+      "name": "TypeScript",
+      "image": "icon-typescript.svg",
+      "bgColor": "#007ACC"
+    },
+    {
+      "name": "ReactJS",
+      "image": "icon-react.svg",
+      "bgColor": "#61DAFB"
+    },
+    {
+      "name": "NodeJS",
+      "image": "icon-node.svg",
+      "bgColor": "#339933"
+    },
+
+    {
+      "name": "NextJS",
+      "image": "icon-nextjs.svg",
+      "bgColor": "white",
+      "color": "black"
+    },
+    {
+      "name": "Graphql",
+      "image": "icon-graphql.svg",
+      "bgColor": "#E10098"
+    },
+    {
+      "name": "MaterialUI",
+      "image": "icon-material-ui.svg",
+      "bgColor": "#3399ff"
+    },
+    {
+      "name": "Redux",
+      "image": "icon-redux.svg",
+      "bgColor": "#764ABC"
+    },
+    {
+      "name": "Zustand",
+      "image": "icon-zustand.svg",
+      "bgColor": "#FFD700",
+      "color": "black"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "camon",
+      "description": "Landing page about CAMON Global Services, using Nextjs and tailwindcss. using best practices for performance, SEO, accessibility and best practices",
+      "tools": ["NextJS", "Typescript", "Tailwindcss"],
+      "site": "https://www.camongs.es/",
+      "github": null,
+      "image": "camon__global__services.webp"
+    },
+    {
+      "name": "f-resources",
+      "description": "Page listing some of the pages with resources for development, design and documentation for the community of web developers and designers.",
+      "tools": ["Sveltekit", "Typescript", "Tailwindcss", "Graphql"],
+      "site": "https://f-resources.vercel.app/",
+      "github": "https://github.com/fjmg84/f-resources",
+      "image": "f-resources.webp"
+    }
+  ]
+}
