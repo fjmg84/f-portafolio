@@ -34,6 +34,7 @@
     },
     {
       "name": "Styles Component",
+      "image": "style-component.png",
       "bgColor": "#fea4db"
     },
     {
@@ -86,7 +87,7 @@
     },
     {
       "name": "Zustand",
-      "image": "icon-zustand.svg",
+      "image": "zustand.png",
       "bgColor": "#FFD700",
       "color": "black"
     }
@@ -107,6 +108,23 @@
       "site": "https://f-resources.vercel.app/",
       "github": "https://github.com/fjmg84/f-resources",
       "image": "f-resources.webp"
+    }
+  ],
+  "contacts": [
+    {
+      "text": "fjmgqba@gmail.com",
+      "url": "mailto:fjmgqba@gmail.com",
+      "image": "gmail"
+    },
+    {
+      "text": "github.com/fjmg84",
+      "url": "https://github.com/fjmg84",
+      "image": "github"
+    },
+    {
+      "text": "fidel-de-jesus-miranda-gallego",
+      "url": "https://www.linkedin.com/in/fidel-de-jesus-miranda-gallego-a171a0239/",
+      "image": "linkedin"
     }
   ]
 }
