@@ -2,18 +2,18 @@
   "works": [
     {
       "name": "EMCOMED",
-      "description": "Network Administrator & Backend Developer",
-      "tags": ["Server Linux & Windows", "PHP", "JQuery", "ReactJS", "NodeJS"]
+      "position": "Network Administrator & Backend Developer",
+      "description": "I supported the development of an ecommerce, providing code in the backend with ExpressJS and in the frontend with React. During this project, I acquired knowledge about Redis and RabbitMQ, using these technologies to store data in memory and thus provide information to the client quickly. Additionally, I implemented microservices for the different web services."
     },
     {
       "name": "DSPOT",
-      "description": "Frontend Developer",
-      "tags": ["ReactJS", "TypeScript", "NextJS", "Graphql", "Redux"]
+      "position": "Frontend Developer",
+      "description": "Here I started using TypeScript, I also strengthened my skills in design and the application of styles with CSS and Sass. I had the opportunity to participate in the development of applications with a high level of design, which has been very enriching. Additionally, I incorporated Figma as a tool for application development, which has allowed me to streamline my workflow and create more effective designs."
     },
     {
       "name": "TETRAIMPACT",
-      "description": "Frontend Developer",
-      "tags": ["TypeScript", "NextJS", "Graphql", "Material UI", "Zustand"]
+      "position": "Frontend Developer",
+      "description": "It is my current position and I am growing as a web developer, strengthening my skills and learning new techniques. I use innovative tools to improve the quality of my projects and deliver exceptional user experiences, keeping up to date with the latest industry trends."
     }
   ],
   "skills": [

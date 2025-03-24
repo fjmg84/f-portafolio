@@ -9,69 +9,63 @@ import Layout from "../layouts/Layout.astro";
 
 import { works, skills, jobs } from "../data/data.json";
 import Tag from "../components/Tag.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout title="Welcome to my Portafolio">
-  <main class="p-5 grid grid-cols-1 gap-5">
+  <main class="flex flex-col gap-32 py-20 max-w-[800px]">
     <section
-      class="flex flex-col p-10 gap-10 bg-[#020617] h-full rounded-lg border-2 border-violet-700/20 shadow-2xl shadow-violet-700/20"
+      class="flex flex-col gap-10"
     >
-      <article class="flex flex-col-reverse gap-10">
-        <h1 class="text-3xl font-extrabold leading-snug">
-          Hi, I’m frontend developer. I dedicate myself to creating web
-          applications.
+      <article class="flex flex-row-reverse gap-10">
+        <h1 class="text-6xl font-extrabold leading-snug">
+          Hi, I`m Fidel Miranda, frontend developer
         </h1>
-        <img
+        <picture class="w-[200px] h-[200px] flex-none">
+          <img
           src="/logo.png"
           alt="logo"
-          width="120px"
-          height="120px"
-          class="w-[120px] h-[120px]"
+          class="w-full h-full"
         />
+        </picture>
       </article>
 
-      <a
+      <Button
         target="_blank"
         href="https://drive.google.com/file/d/1iFWqfRCOrkGZ0DIorNyWAsf4eAaAFoti/view?usp=drive_link"
-        class="bg-[#333] rounded-lg flex items-center justify-center gap-10 relative py-5 px-10 text-xl w-fit"
+        variant
         >Download CV in pdf
-        <div class="hidden">
-          <IconArrowWhite />
-        </div>
-        <div class="hidden -translate-y-10">
-          <IconArrowBlack />
-        </div>
-      </a>
+      </p>
 
-      <article class="flex flex-col gap-5">
-        <h2 class="text-3xl font-extrabold">About Me</h2>
-        <p class="leading-snug">
+     
+    </section>
+
+    <section class="flex flex-col gap-5">     
+        <h2 class="text-6xl font-extrabold">About Me</h2>
+        <p class="leading-snug text-2xl">
           Passionate about web design and development, committed to offering
           innovative and effective solutions for each project.
         </p>
-      </article>
     </section>
 
     <section
-      class="flex flex-col p-10 gap-5 bg-[#020617] h-full rounded-lg border-2 border-violet-700/20 shadow-2xl shadow-violet-700/20"
+      class="flex flex-col gap-5"
     >
-      <h2 class="text-3xl font-extrabold">Work Experience</h2>
+      <h2 class="text-6xl font-extrabold">Work Experience</h2>
       <ul class="flex flex-col gap-10">
         {
           works.map((work) => {
             return (
               <li class="flex flex-col gap-2">
-                <p class="font-extrabold">{work.name}</p>
+                <p class="font-extrabold text-2xl">{work.name}</p>
 
-                <p class="italic font-extralight">{work.description}</p>
+                <p class="italic font-extralight text-xl">{work.position}</p>
 
                 <div class="h-[1px] w-full bg-[#333]" />
 
-                <div class="flex gap-2 flex-wrap">
-                  {work.tags.map((tag) => {
-                    return <Tag name={tag} />;
-                  })}
-                </div>
+                <p class="italic font-extralight ">{work.description}</p>
+
+                
               </li>
             );
           })
@@ -80,9 +74,9 @@ import Tag from "../components/Tag.astro";
     </section>
 
     <section
-      class="relative flex flex-col gap-10 p-10 bg-[#020617] h-full rounded-lg border-2 border-violet-900 shadow-2xl shadow-violet-700/20"
+      class="relative flex flex-col gap-10"
     >
-      <h2 class="text-3xl font-extrabold">My Skills</h2>
+      <h2 class="text-3xl font-extrabold">Skills</h2>
       <ul class="flex flex-wrap gap-10 z-20">
         {
           skills.map((skill) => {
@@ -94,8 +88,9 @@ import Tag from "../components/Tag.astro";
                     alt={skill.name}
                     width="32px"
                     height="32px"
+                    class="transition-all group-hover:scale-110"
                   />
-                  <tool-tip style={`background: ${skill.bgColor}; color:${skill.color ? skill.color : 'white'}`} class={`absolute text-sm px-5 py-3 transition-all opacity-0 rounded-md -left-1/2 z-20 uppercase shadow-md group-hover:opacity-100 `}>{skill.name}</tool-tip>
+                  <tool-tip style={`background: ${skill.bgColor}; color:${skill.color ? skill.color : 'white'}`} class={`absolute text-sm -bottom-14 px-5 py-3 transition-all opacity-0 rounded-md -left-1/2 z-20 uppercase shadow-md group-hover:opacity-100`}>{skill.name}</tool-tip>
                 ) : (
                   <span style={`background: ${skill.bgColor}`} class="text-sm px-5 py-3 rounded-md uppercase">{skill.name}</span>
                 )}
@@ -106,32 +101,36 @@ import Tag from "../components/Tag.astro";
       </ul>
     </section>
 
-  <section
-    class="p-10 bg-[#020617] h-full rounded-lg border-2 border-violet-700/20 shadow-2xl shadow-violet-700/20"
-  >
-  <ul class="flex flex-col gap-10">
+  <section>
+  <ul class="flex flex-col gap-20">
     {
       jobs.map((job) => {
-        return <li class="flex flex-col gap-5">
+        return <li class="flex flex-col gap-10">
+        <div class="flex flex-col md:flex-row gap-5">
           <picture class="max-w-[400px]"><img src={job.image} alt={job.name} /></picture>
+         
+         <div class="flex flex-col gap-5">
           <p>{job.description}</p>
-         <div class="flex flex-wrap gap-2">
-           {
+          
+          <div class="flex flex-wrap gap-2">
+              {
             job.tools.map(tag => {
               return <Tag name={tag} />
             })
           }
+          </div>
          </div>
-         <div class="flex flex-wrap justify-between gap-2">
+        </div>
+         <div class="flex flex-wrap gap-5">
          {
-          job.github && <a href={job.github} class="flex items-center gap-3 bg-[#333] w-fit px-8 py-2 rounded-full hover:bg-white hover:text-[#333] transition-colors cursor-pointer">
-            github
-            <IconGitHub/>
-            </a>
+          job.github && <Button href={job.github}>
+             github
+             <IconGitHub/>
+          </Button>
           }
-        <a href={job.site} class="flex items-center gap-3 border-[1px] border-gray-700 text-white w-fit px-8 py-2 rounded-full hover:bg-white hover:text-[#333] transition-colors cursor-pointer">
+        <Button href={job.site}  variant>
           {job.name} <IconArrowRight/>
-          </a>
+          </Button>
          </div>
         </li>
       })

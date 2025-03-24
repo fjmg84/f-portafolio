@@ -1,0 +1,16 @@
+---
+const { href, variant = false, ...rest } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "flex items-center gap-3 w-fit px-8 py-2 rounded-full transition-colors cursor-pointer",
+    variant
+      ? "border-[1px] border-gray-700 hover:bg-white hover:text-[#333]"
+      : "bg-[#333] hover:bg-white hover:text-[#333]",
+  ]}
+  {...rest}
+>
+  <slot />
+</a>
