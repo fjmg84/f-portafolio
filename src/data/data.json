@@ -2,8 +2,8 @@
   "works": [
     {
       "name": "EMCOMED",
-      "position": "Network Administrator & Backend Developer",
-      "description": "I supported the development of an ecommerce, providing code in the backend with ExpressJS and in the frontend with React. During this project, I acquired knowledge about Redis and RabbitMQ, using these technologies to store data in memory and thus provide information to the client quickly. Additionally, I implemented microservices for the different web services."
+      "position": "Network and Server Administrator | Application Development",
+      "description": "Worked for 7 years as a network and server administrator in Linux and Windows environments, managing a segmented infrastructure with over 100 users. During this time, I actively contributed to the development of business tools and applications using technologies such as PHP, ExpressJS, jQuery, and React, integrated with MSSQL and MySQL databases. My experience includes optimizing server performance, implementing efficient data management solutions, and automating processes."
     },
     {
       "name": "DSPOT",
@@ -13,7 +13,7 @@
     {
       "name": "TETRAIMPACT",
       "position": "Frontend Developer",
-      "description": "It is my current position and I am growing as a web developer, strengthening my skills and learning new techniques. I use innovative tools to improve the quality of my projects and deliver exceptional user experiences, keeping up to date with the latest industry trends."
+      "description": "Currently, I am part of this company, where I have participated in various software development projects, designing and implementing efficient and scalable solutions. I work with modern technologies such as NextJS, Material UI, Jest, Vitest, Remix, and Prisma ORM, focusing on creating intuitive interfaces, optimizing frontend performance, and ensuring efficient database integration. My experience includes process optimization, implementing automated tests, and developing robust applications with a modular architecture."
     }
   ],
   "skills": [
@@ -95,7 +95,7 @@
   "jobs": [
     {
       "name": "camon",
-      "description": "Landing page about CAMON Global Services, using Nextjs and tailwindcss. using best practices for performance, SEO, accessibility and best practices",
+      "description": "I designed and developed a landing page for CAMON Global Services, focusing on performance, SEO, accessibility, and a seamless user experience. I implemented technologies such as NextJS, Taildwind, and image optimization, ensuring fast load times and compatibility across multiple devices.",
       "tools": ["NextJS", "Typescript", "Tailwindcss"],
       "site": "https://www.camongs.es/",
       "github": null,
