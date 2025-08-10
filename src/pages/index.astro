@@ -10,6 +10,7 @@ import Layout from "../layouts/Layout.astro";
 import { works, skills, jobs, contacts } from "../data/data.json";
 import Tag from "../components/Tag.astro";
 import Button from "../components/Button.astro";
+import Threads from "../components/Threads.tsx";
 
 const IconMapper = {
   gmail: StreamlineGmail,
@@ -19,13 +20,15 @@ const IconMapper = {
 ---
 
 <Layout title="fjmg84">
-  <main class="flex flex-col gap-56 py-20 md:max-w-[1024px] px-10 relative">
-    <section class="flex flex-col gap-5">
+  <main class="flex flex-col py-20 relative w-full">
+    <section
+      class="flex flex-col gap-5 pt-20 justify-center items-center w-full"
+    >
       <article
-        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10 md:h-screen"
+        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10"
       >
         <div class="flex flex-col gap-5">
-          <h1 class="text-6xl font-extrabold">Hi, I`m Fidel Miranda,</h1>
+          <h1 class="text-6xl font-extrabold">Hi, I`m Fidel Miranda</h1>
           <span class="text-purple-400 text-5xl"> frontend developer</span>
           <div class="flex gap-10 items-center flex-wrap">
             <Button
@@ -58,109 +61,133 @@ const IconMapper = {
           </div>
         </div>
 
-        <picture class="w-[200px] h-[200px] flex-none">
-          <img src="/logo.png" alt="logo" class="w-full h-full" />
+        <picture class="w-[200px] h-[200px] flex-none relative">
+          <img src="/logo.png" alt="logo" class="w-full h-full z-20 absolute" />
+          <img
+            src="/logo.png"
+            alt="logo"
+            class="w-full h-full absolute blur-xl top-0 z-10"
+          />
         </picture>
       </article>
     </section>
 
-    <section class="flex flex-col gap-5">
-      <h2 class="text-6xl font-extrabold">About Me</h2>
-      <p class="leading-snug text-2xl">
-        Passionate about web design and development, committed to offering
-        innovative and effective solutions for each project.
-      </p>
-    </section>
+    <div
+      style={{
+        width: "100%",
+        height: "500px",
+        position: "relative",
+      }}
+    >
+      <Threads
+        client:load
+        amplitude={2}
+        distance={0}
+        enableMouseInteraction={true}
+      />
+    </div>
 
-    <section class="flex flex-col gap-5">
-      <h2 class="text-6xl font-extrabold">Work Experience</h2>
-      <ul class="flex flex-col gap-10">
-        {
-          works.map((work) => {
-            return (
-              <li class="flex flex-col gap-2">
-                <p class="font-extrabold text-xl text-purple-400">
-                  {work.name}
-                </p>
+    <div class="justify-center items-center flex px-10">
+      <div class="md:w-[50%] flex gap-24 flex-col">
+        <section class="flex flex-col gap-5">
+          <h2 class="text-6xl font-extrabold">About Me</h2>
+          <p class="leading-snug text-2xl">
+            Passionate about web design and development, committed to offering
+            innovative and effective solutions for each project.
+          </p>
+        </section>
 
-                <p class="font-extralight text-lg text-purple-300">
-                  {work.position}
-                </p>
+        <section class="flex flex-col gap-5">
+          <h2 class="text-6xl font-extrabold">Work Experience</h2>
+          <ul class="flex flex-col gap-10">
+            {
+              works.map((work) => {
+                return (
+                  <li class="flex flex-col gap-2">
+                    <p class="font-extrabold text-xl text-purple-400">
+                      {work.name}
+                    </p>
 
-                <div class="h-[1px] w-full bg-[#333]" />
+                    <p class="font-extralight text-lg text-purple-300">
+                      {work.position}
+                    </p>
 
-                <p class="font-light">{work.description}</p>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </section>
+                    <div class="h-[1px] w-full bg-[#333]" />
 
-    <section class="relative flex flex-col gap-5">
-      <h2 class="text-6xl font-extrabold">Skills</h2>
-      <article class="flex flex-col items-center">
-        <ul class="flex justify-center flex-wrap gap-5 max-w-lg">
-          {
-            skills.map((skill) => {
-              return (
-                <li class="text-white">
-                  <div
-                    style={{
-                      backgroundColor: skill.bgColor,
-                      color: skill.color,
-                    }}
-                    class="text-sm px-6 py-2 rounded-full uppercase"
-                  >
-                    {skill.name}
-                  </div>
-                </li>
-              );
-            })
-          }
-        </ul>
-      </article>
-    </section>
+                    <p class="font-light">{work.description}</p>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </section>
 
-    <section class="relative flex flex-col gap-5">
-      <h2 class="text-6xl font-extrabold">Some Projects</h2>
-      <ul class="flex flex-col gap-20">
-        {
-          jobs.map((job) => {
-            return (
-              <li class="flex flex-col gap-10">
-                <div class="flex flex-col md:flex-row gap-5">
-                  <picture class="max-w-[400px]">
-                    <img src={job.image} alt={job.name} />
-                  </picture>
+        <section class="relative flex flex-col gap-5">
+          <h2 class="text-6xl font-extrabold">Skills</h2>
+          <article class="flex flex-col items-center">
+            <ul class="flex justify-center flex-wrap gap-5 max-w-lg">
+              {
+                skills.map((skill) => {
+                  return (
+                    <li class="text-white">
+                      <div
+                        style={{
+                          backgroundColor: skill.bgColor,
+                          color: skill.color,
+                        }}
+                        class="text-sm px-6 py-2 rounded-full uppercase"
+                      >
+                        {skill.name}
+                      </div>
+                    </li>
+                  );
+                })
+              }
+            </ul>
+          </article>
+        </section>
 
-                  <div class="flex flex-col gap-5">
-                    <p>{job.description}</p>
+        <section class="relative flex flex-col gap-5">
+          <h2 class="text-6xl font-extrabold">Some Projects</h2>
+          <ul class="flex flex-col gap-20">
+            {
+              jobs.map((job) => {
+                return (
+                  <li class="flex flex-col gap-10">
+                    <div class="flex flex-col md:flex-row gap-5">
+                      <picture class="max-w-[400px]">
+                        <img src={job.image} alt={job.name} />
+                      </picture>
 
-                    <div class="flex flex-wrap gap-2">
-                      {job.tools.map((tag) => {
-                        return <Tag name={tag} />;
-                      })}
+                      <div class="flex flex-col gap-5">
+                        <p>{job.description}</p>
+
+                        <div class="flex flex-wrap gap-2">
+                          {job.tools.map((tag) => {
+                            return <Tag name={tag} />;
+                          })}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-5">
-                  {job.github && (
-                    <Button href={job.github}>
-                      github
-                      <IconGitHub />
-                    </Button>
-                  )}
-                  <Button href={job.site} variant>
-                    {job.name} <IconArrowRight />
-                  </Button>
-                </div>
-              </li>
-            );
-          })
-        }
-      </ul>
-    </section>
+                    <div class="flex flex-wrap gap-5">
+                      {job.github && (
+                        <Button href={job.github}>
+                          github
+                          <IconGitHub />
+                        </Button>
+                      )}
+                      <Button href={job.site} variant>
+                        {job.name} <IconArrowRight />
+                      </Button>
+                    </div>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </section>
+      </div>
+    </div>
   </main>
 
   <style>
