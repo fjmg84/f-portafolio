@@ -20,27 +20,32 @@
     {
       "name": "HTML5",
       "image": "icon-html5.svg",
-      "bgColor": "#f16a30"
+      "bgColor": "#f16a30",
+      "color": "black"
     },
     {
       "name": "CSS3",
       "image": "icon-css3.svg",
-      "bgColor": "#00AFFF"
+      "bgColor": "#00AFFF",
+      "color": "black"
     },
     {
       "name": "SASS",
       "image": "icon-sass.svg",
-      "bgColor": "#ce6b9c"
+      "bgColor": "#ce6b9c",
+      "color": "black"
     },
     {
       "name": "Styles Component",
       "image": "style-component.png",
-      "bgColor": "#fea4db"
+      "bgColor": "#fea4db",
+      "color": "black"
     },
     {
       "name": "Tailwind",
       "image": "icon-tailwind.svg",
-      "bgColor": "#3ebff8"
+      "bgColor": "#3ebff8",
+      "color": "black"
     },
     {
       "name": "JavaScript",
@@ -56,12 +61,14 @@
     {
       "name": "ReactJS",
       "image": "icon-react.svg",
-      "bgColor": "#61DAFB"
+      "bgColor": "#61DAFB",
+      "color": "black"
     },
     {
       "name": "NodeJS",
       "image": "icon-node.svg",
-      "bgColor": "#339933"
+      "bgColor": "#339933",
+      "color": "black"
     },
 
     {
@@ -78,7 +85,8 @@
     {
       "name": "MaterialUI",
       "image": "icon-material-ui.svg",
-      "bgColor": "#3399ff"
+      "bgColor": "#3399ff",
+      "color": "black"
     },
     {
       "name": "Redux",
