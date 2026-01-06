@@ -145,7 +145,7 @@
       "name": "los pichyboys",
       "description": "This page is for educational purposes only, to improve and practice my web development knowledge. The official page can be found at `www.lospichyboys.com`.",
       "tools": ["astro", "tailwind", "html5", "javascript", "typescript"],
-      "site": null,
+      "site": "https://los-pichy-boys-web.vercel.app/",
       "github": "https://github.com/fjmg84/los-pichy-boys-web",
       "images": [
         "LosPichyBoy/image-1.webp",
