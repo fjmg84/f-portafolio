@@ -1,9 +1,10 @@
 ---
-const { name } = Astro.props;
+const { name, bgColor, color } = Astro.props;
 ---
 
 <span
-  class="bg-[#333] px-4 py-2 text-sm rounded-full text-nowrap w-fit font-extralight"
+  class="px-4 py-2 text-sm rounded-full text-nowrap w-fit font-extralight"
+  style={`background-color: ${bgColor || "#333"}; color: ${color || "white"};`}
 >
   {name}
 </span>
