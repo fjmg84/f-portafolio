@@ -18,82 +18,95 @@
   ],
   "skills": [
     {
+      "id": "html5",
       "name": "HTML5",
       "image": "icon-html5.svg",
       "bgColor": "#f16a30",
       "color": "black"
     },
     {
+      "id": "css3",
       "name": "CSS3",
       "image": "icon-css3.svg",
       "bgColor": "#00AFFF",
       "color": "black"
     },
     {
+      "id": "sass",
       "name": "SASS",
       "image": "icon-sass.svg",
       "bgColor": "#ce6b9c",
       "color": "black"
     },
     {
+      "id": "styled-components",
       "name": "Styles Component",
       "image": "style-component.png",
       "bgColor": "#fea4db",
       "color": "black"
     },
     {
+      "id": "tailwind",
       "name": "Tailwind",
       "image": "icon-tailwind.svg",
       "bgColor": "#3ebff8",
       "color": "black"
     },
     {
+      "id": "javascript",
       "name": "JavaScript",
       "image": "icon-javascript.svg",
       "bgColor": "#f7e025",
       "color": "black"
     },
     {
+      "id": "typescript",
       "name": "TypeScript",
       "image": "icon-typescript.svg",
       "bgColor": "#007ACC"
     },
     {
+      "id": "reactjs",
       "name": "ReactJS",
       "image": "icon-react.svg",
       "bgColor": "#61DAFB",
       "color": "black"
     },
     {
+      "id": "nodejs",
       "name": "NodeJS",
       "image": "icon-node.svg",
       "bgColor": "#339933",
       "color": "black"
     },
-
     {
+      "id": "nextjs",
       "name": "NextJS",
       "image": "icon-nextjs.svg",
       "bgColor": "white",
       "color": "black"
     },
     {
+      "id": "graphql",
       "name": "Graphql",
       "image": "icon-graphql.svg",
       "bgColor": "#E10098"
     },
     {
+      "id": "materialui",
       "name": "MaterialUI",
       "image": "icon-material-ui.svg",
       "bgColor": "#3399ff",
       "color": "black"
     },
     {
+      "id": "redux",
       "name": "Redux",
       "image": "icon-redux.svg",
       "bgColor": "#764ABC"
     },
     {
+      "id": "zustand",
       "name": "Zustand",
       "image": "zustand.png",
       "bgColor": "#FFD700",
@@ -104,34 +117,82 @@
     {
       "name": "camon",
       "description": "I designed and developed a landing page for CAMON Global Services, focusing on performance, SEO, accessibility, and a seamless user experience. I implemented technologies such as NextJS, Taildwind, and image optimization, ensuring fast load times and compatibility across multiple devices.",
-      "tools": ["NextJS", "Typescript", "Tailwindcss"],
+      "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
       "site": "https://www.camongs.es/",
       "github": null,
-      "image": "camon__global__services.webp"
+      "images": [
+        "CAMON/image-1.webp",
+        "CAMON/image-2.webp",
+        "CAMON/image-3.webp"
+      ]
     },
     {
       "name": "f-resources",
       "description": "Page listing some of the pages with resources for development, design and documentation for the community of web developers and designers.",
-      "tools": ["Sveltekit", "Typescript", "Tailwindcss", "Graphql"],
+      "tools": [
+        "sveltekit",
+        "graphql",
+        "html5",
+        "css3",
+        "javascript",
+        "typescript"
+      ],
       "site": "https://f-resources.vercel.app/",
       "github": "https://github.com/fjmg84/f-resources",
-      "image": "f-resources.webp"
+      "images": ["f-resources.webp"]
+    },
+    {
+      "name": "los pichyboys",
+      "description": "This page is for educational purposes only, to improve and practice my web development knowledge. The official page can be found at `www.lospichyboys.com`.",
+      "tools": ["astro", "tailwind", "html5", "javascript", "typescript"],
+      "site": null,
+      "github": "https://github.com/fjmg84/los-pichy-boys-web",
+      "images": [
+        "LosPichyBoy/image-1.webp",
+        "LosPichyBoy/image-2.webp",
+        "LosPichyBoy/image-3.webp"
+      ]
+    },
+    {
+      "name": "MiEconomia",
+      "description": "It's a website for managing your personal finances with the help of AI that provides reports based on your income and expenses. You can ask it to give you a financial overview and recommendations. It also includes a guide on how to use it correctly.",
+      "tools": [
+        "astro",
+        "tailwind",
+        "html5",
+        "javascript",
+        "typescript",
+        "chart.js",
+        "ollama-ia"
+      ],
+      "github": "https://github.com/fjmg84/details-of-my-economy",
+      "site": null,
+      "images": [
+        "MiEconomia/image-1.webp",
+        "MiEconomia/image-2.webp",
+        "MiEconomia/image-3.webp",
+        "MiEconomia/image-4.webp",
+        "MiEconomia/image-5.webp"
+      ]
     }
   ],
   "contacts": [
     {
       "text": "fjmgqba@gmail.com",
       "url": "mailto:fjmgqba@gmail.com",
+      "label": "Email",
       "image": "gmail"
     },
     {
       "text": "github.com/fjmg84",
       "url": "https://github.com/fjmg84",
+      "label": "GitHub",
       "image": "github"
     },
     {
       "text": "fidel-de-jesus-miranda-gallego",
       "url": "https://www.linkedin.com/in/fidel-de-jesus-miranda-gallego-a171a0239/",
+      "label": "LinkedIn",
       "image": "linkedin"
     }
   ]
