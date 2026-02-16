@@ -3,17 +3,17 @@
     {
       "name": "EMCOMED",
       "position": "Network and Server Administrator | Application Development",
-      "description": "Worked for 7 years as a network and server administrator in Linux and Windows environments, managing a segmented infrastructure with over 100 users. During this time, I actively contributed to the development of business tools and applications using technologies such as PHP, ExpressJS, jQuery, and React, integrated with MSSQL and MySQL databases. My experience includes optimizing server performance, implementing efficient data management solutions, and automating processes."
+      "description": "Managed a segmented Linux/Windows infrastructure for 100+ users while also building internal business tools. Delivered PHP/Express/React apps integrated with MSSQL/MySQL, optimized server performance, improved data workflows, and automated repetitive processes."
     },
     {
       "name": "DSPOT",
       "position": "Frontend Developer",
-      "description": "During this position, I began using NextJs alongside TypeScript and also honed my design and styling skills with CSS and Sass. I've had the opportunity to participate in highly design-intensive app development, which has been very rewarding. I also incorporated Figma as an app development tool, which has allowed me to streamline my workflow and create more effective designs."
+      "description": "Built design-driven interfaces with Next.js and TypeScript, strengthening UI craftsmanship with CSS and Sass. Collaborated closely with design in Figma to translate detailed layouts into polished, production-ready UIs and faster iteration cycles."
     },
     {
       "name": "TETRAIMPACT",
       "position": "Frontend Developer",
-      "description": "Currently, I am part of this company, where I have participated in various software development projects, designing and implementing efficient and scalable solutions. I work with modern technologies such as NextJS, Material UI, Jest, Vitest, Remix, and Prisma ORM, focusing on creating intuitive interfaces, optimizing frontend performance, and ensuring efficient database integration. My experience includes process optimization, implementing automated tests, and developing robust applications with a modular architecture."
+      "description": "Developed scalable frontend solutions across multiple projects using Next.js, Remix, Material UI, and Prisma. Focused on intuitive UX, performance optimization, and test automation with Jest/Vitest, while improving delivery through modular architecture and process refinements."
     }
   ],
   "skills": [
@@ -116,19 +116,15 @@
   "jobs": [
     {
       "name": "camon",
-      "description": "I designed and developed a landing page for CAMON Global Services, focusing on performance, SEO, accessibility, and a seamless user experience. I implemented technologies such as NextJS, Taildwind, and image optimization, ensuring fast load times and compatibility across multiple devices.",
+      "description": "Designed and built a high-converting landing page for CAMON Global Services with a strong focus on performance, SEO, and accessibility. Implemented Next.js, Tailwind, and image optimization to deliver fast load times, clear messaging, and responsive layouts across devices.",
       "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
       "site": "https://www.camongs.es/",
       "github": null,
-      "images": [
-        "CAMON/image-1.webp",
-        "CAMON/image-2.webp",
-        "CAMON/image-3.webp"
-      ]
+      "images": ["CAMON/principal.webp"]
     },
     {
       "name": "f-resources",
-      "description": "Page listing some of the pages with resources for development, design and documentation for the community of web developers and designers.",
+      "description": "Curated resource hub for web developers and designers, organizing tools, docs, and learning materials in a clean, searchable UI. Built to surface high-quality references quickly and reduce time spent hunting for links.",
       "tools": [
         "sveltekit",
         "graphql",
@@ -138,20 +134,7 @@
         "typescript"
       ],
       "site": "https://f-resources.vercel.app/",
-      "github": "https://github.com/fjmg84/f-resources",
-      "images": ["f-resources.webp"]
-    },
-    {
-      "name": "los pichyboys",
-      "description": "This page is for educational purposes only, to improve and practice my web development knowledge. The official page can be found at `www.lospichyboys.com`.",
-      "tools": ["astro", "tailwind", "html5", "javascript", "typescript"],
-      "site": "https://los-pichy-boys-web.vercel.app/",
-      "github": "https://github.com/fjmg84/los-pichy-boys-web",
-      "images": [
-        "LosPichyBoy/image-1.webp",
-        "LosPichyBoy/image-2.webp",
-        "LosPichyBoy/image-3.webp"
-      ]
+      "images": ["f-resources/principal.webp"]
     },
     {
       "name": "MiEconomia",
@@ -166,13 +149,7 @@
         "ollama-ia"
       ],
       "github": "https://github.com/fjmg84/details-of-my-economy",
-      "site": null,
-      "images": [
-        "MiEconomia/image-1.webp",
-        "MiEconomia/image-2.webp",
-        "MiEconomia/image-3.webp",
-        "MiEconomia/image-4.webp"
-      ]
+      "images": ["MiEconomia/principal.webp"]
     }
   ],
   "contacts": [
