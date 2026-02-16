@@ -144,17 +144,19 @@ const IconMapper = {
 
           <ul class="flex flex-wrap gap-5 justify-start items-baseline">
             {
-              skills.map((skill) => {
-                return (
-                  <li class="text-white">
-                    <Tag
-                      name={skill.name}
-                      bgColor={skill.bgColor}
-                      color={skill.color}
-                    />
-                  </li>
-                );
-              })
+              skills
+                .sort((a, b) => a.name.localeCompare(b.name))
+                .map((skill) => {
+                  return (
+                    <li class="text-white">
+                      <Tag
+                        name={skill.name}
+                        bgColor={skill.bgColor}
+                        color={skill.color}
+                      />
+                    </li>
+                  );
+                })
             }
           </ul>
         </section>
@@ -187,16 +189,18 @@ const IconMapper = {
                           <p>{job.description}</p>
 
                           <div class="flex flex-wrap gap-2">
-                            {job.tools.map((tag) => {
-                              const skill = skills.find((s) => s.id === tag);
-                              return (
-                                <Tag
-                                  name={skill?.name || tag}
-                                  bgColor={skill?.bgColor}
-                                  color={skill?.color}
-                                />
-                              );
-                            })}
+                            {job.tools
+                              .sort((a, b) => a.localeCompare(b))
+                              .map((tag) => {
+                                const skill = skills.find((s) => s.id === tag);
+                                return (
+                                  <Tag
+                                    name={skill?.name || tag}
+                                    bgColor={skill?.bgColor}
+                                    color={skill?.color}
+                                  />
+                                );
+                              })}
                           </div>
                         </div>
                         <div class="flex flex-wrap gap-5">
