@@ -193,13 +193,22 @@ const IconMapper = {
                         </div>
                         <div class="flex flex-wrap gap-5">
                           {job.github && (
-                            <Button href={job.github}>
+                            <Button
+                              href={job.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               github
                               <IconGitHub />
                             </Button>
                           )}
                           {job.site && (
-                            <Button href={job.site} variant>
+                            <Button
+                              href={job.site}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              variant
+                            >
                               {job.name} <IconArrowRight />
                             </Button>
                           )}
