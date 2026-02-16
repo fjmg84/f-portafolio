@@ -142,18 +142,6 @@
       "images": ["f-resources.webp"]
     },
     {
-      "name": "los pichyboys",
-      "description": "This page is for educational purposes only, to improve and practice my web development knowledge. The official page can be found at `www.lospichyboys.com`.",
-      "tools": ["astro", "tailwind", "html5", "javascript", "typescript"],
-      "site": "https://los-pichy-boys-web.vercel.app/",
-      "github": "https://github.com/fjmg84/los-pichy-boys-web",
-      "images": [
-        "LosPichyBoy/image-1.webp",
-        "LosPichyBoy/image-2.webp",
-        "LosPichyBoy/image-3.webp"
-      ]
-    },
-    {
       "name": "MiEconomia",
       "description": "It's a website for managing your personal finances with the help of AI that provides reports based on your income and expenses. You can ask it to give you a financial overview and recommendations. It also includes a guide on how to use it correctly.",
       "tools": [
