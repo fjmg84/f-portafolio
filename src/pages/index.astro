@@ -72,12 +72,18 @@ const IconMapper = {
             alt="logo"
             class="w-full h-full z-20 absolute"
             fetchpriority="high"
+            height="500"
+            width="auto"
+            loading="lazy"
           />
           <img
             src="/logo.png"
             alt="logo"
             class="w-full h-full absolute blur-xl top-0 z-10"
             fetchpriority="high"
+            height="500"
+            width="auto"
+            loading="lazy"
           />
         </picture>
       </article>
@@ -168,6 +174,9 @@ const IconMapper = {
                             <img
                               src={image}
                               alt={job.name}
+                              height="500"
+                              width="auto"
+                              loading="lazy"
                               class="w-0 flex-grow object-cover opacity-80 transition-all duration-300 hover:opacity-100 hover:cursor-crosshair hover:w-96"
                             />
                           );
