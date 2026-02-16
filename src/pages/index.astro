@@ -25,7 +25,7 @@ const IconMapper = {
       class="flex flex-col gap-5 pt-20 justify-center items-center w-full"
     >
       <article
-        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10 px-10"
+        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10"
       >
         <div class="flex flex-col gap-5">
           <h1 class="text-6xl font-extrabold">Hi, I'm Fidel Miranda</h1>
@@ -104,7 +104,7 @@ const IconMapper = {
       />
     </div>
 
-    <div class="flex px-10">
+    <div class="flex">
       <div class="flex gap-24 flex-col justify-center items-center">
         <section class="flex flex-col gap-5 md:w-[50%]">
           <h2 class="text-6xl font-extrabold">About Me</h2>
@@ -139,28 +139,27 @@ const IconMapper = {
           </ul>
         </section>
 
-        <section class="relative flex flex-col gap-5">
+        <section class="flex flex-col gap-5 md:w-[50%]">
           <h2 class="text-6xl font-extrabold">Skills</h2>
-          <article class="flex flex-col items-center">
-            <ul class="flex justify-center flex-wrap gap-5 max-w-lg">
-              {
-                skills.map((skill) => {
-                  return (
-                    <li class="text-white">
-                      <Tag
-                        name={skill.name}
-                        bgColor={skill.bgColor}
-                        color={skill.color}
-                      />
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          </article>
+
+          <ul class="flex flex-wrap gap-5 justify-start items-baseline">
+            {
+              skills.map((skill) => {
+                return (
+                  <li class="text-white">
+                    <Tag
+                      name={skill.name}
+                      bgColor={skill.bgColor}
+                      color={skill.color}
+                    />
+                  </li>
+                );
+              })
+            }
+          </ul>
         </section>
 
-        <section class="relative flex flex-col gap-5 md:w-[75%]">
+        <section class="flex flex-col gap-5 md:w-[50%]">
           <h2 class="text-6xl font-extrabold">Some Projects</h2>
           <ul class="flex flex-col gap-20">
             {
