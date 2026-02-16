@@ -120,11 +120,7 @@
       "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
       "site": "https://www.camongs.es/",
       "github": null,
-      "images": [
-        "CAMON/image-1.webp",
-        "CAMON/image-2.webp",
-        "CAMON/image-3.webp"
-      ]
+      "images": ["CAMON/principal.webp"]
     },
     {
       "name": "f-resources",
@@ -138,7 +134,7 @@
         "typescript"
       ],
       "site": "https://f-resources.vercel.app/",
-      "images": ["f-resources.webp"]
+      "images": ["f-resources/principal.webp"]
     },
     {
       "name": "MiEconomia",
@@ -153,12 +149,7 @@
         "ollama-ia"
       ],
       "github": "https://github.com/fjmg84/details-of-my-economy",
-      "images": [
-        "MiEconomia/image-1.webp",
-        "MiEconomia/image-2.webp",
-        "MiEconomia/image-3.webp",
-        "MiEconomia/image-4.webp"
-      ]
+      "images": ["MiEconomia/principal.webp"]
     }
   ],
   "contacts": [
