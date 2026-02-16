@@ -116,7 +116,7 @@
   "jobs": [
     {
       "name": "camon",
-      "description": "I designed and developed a landing page for CAMON Global Services, focusing on performance, SEO, accessibility, and a seamless user experience. I implemented technologies such as NextJS, Taildwind, and image optimization, ensuring fast load times and compatibility across multiple devices.",
+      "description": "Designed and built a high-converting landing page for CAMON Global Services with a strong focus on performance, SEO, and accessibility. Implemented Next.js, Tailwind, and image optimization to deliver fast load times, clear messaging, and responsive layouts across devices.",
       "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
       "site": "https://www.camongs.es/",
       "github": null,
@@ -128,7 +128,7 @@
     },
     {
       "name": "f-resources",
-      "description": "Page listing some of the pages with resources for development, design and documentation for the community of web developers and designers.",
+      "description": "Curated resource hub for web developers and designers, organizing tools, docs, and learning materials in a clean, searchable UI. Built to surface high-quality references quickly and reduce time spent hunting for links.",
       "tools": [
         "sveltekit",
         "graphql",
@@ -138,7 +138,6 @@
         "typescript"
       ],
       "site": "https://f-resources.vercel.app/",
-      "github": "https://github.com/fjmg84/f-resources",
       "images": ["f-resources.webp"]
     },
     {
@@ -154,7 +153,6 @@
         "ollama-ia"
       ],
       "github": "https://github.com/fjmg84/details-of-my-economy",
-      "site": null,
       "images": [
         "MiEconomia/image-1.webp",
         "MiEconomia/image-2.webp",
