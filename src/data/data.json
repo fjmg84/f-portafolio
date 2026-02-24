@@ -118,7 +118,6 @@
       "name": "camon",
       "description": "Designed and built a high-converting landing page for CAMON Global Services with a strong focus on performance, SEO, and accessibility. Implemented Next.js, Tailwind, and image optimization to deliver fast load times, clear messaging, and responsive layouts across devices.",
       "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
-      "site": "https://www.camongs.es/",
       "github": null,
       "images": ["CAMON/principal.webp"]
     },
