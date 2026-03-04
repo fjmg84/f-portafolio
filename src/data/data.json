@@ -115,6 +115,14 @@
   ],
   "jobs": [
     {
+      "name": "snap-assets",
+      "description": "A platform that lets you generate high-quality visual assets—from blog thumbnails to certificates and coupons—simply by filling out a form or using a dynamic API. Choose a template, customize the colors, and download your ready-to-publish PNG.",
+      "tools": ["nextjs", "javascript", "typescript", "tailwind"],
+      "github": null,
+      "images": ["snap-assets/image.webp"],
+      "site": "https://assets.qbacode.com/"
+    },
+    {
       "name": "camon",
       "description": "Designed and built a high-converting landing page for CAMON Global Services with a strong focus on performance, SEO, and accessibility. Implemented Next.js, Tailwind, and image optimization to deliver fast load times, clear messaging, and responsive layouts across devices.",
       "tools": ["html5", "nextjs", "javascript", "typescript", "tailwind"],
