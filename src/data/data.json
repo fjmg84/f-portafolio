@@ -133,14 +133,14 @@
       "name": "f-resources",
       "description": "Curated resource hub for web developers and designers, organizing tools, docs, and learning materials in a clean, searchable UI. Built to surface high-quality references quickly and reduce time spent hunting for links.",
       "tools": [
-        "sveltekit",
+        "nextjs",
         "graphql",
         "html5",
         "css3",
         "javascript",
         "typescript"
       ],
-      "site": "https://f-resources.vercel.app/",
+      "site": "https://resources.qbacode.com/",
       "images": ["f-resources/principal.webp"]
     },
     {
