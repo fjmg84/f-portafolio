@@ -131,7 +131,10 @@ const IconMapper = {
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .map((skill) => {
                   return (
-                    <li class="text-white">
+                    <li
+                      class="skill-pill text-white cursor-default rounded-lg"
+                      style={`--skill-shadow: ${skill.bgColor || "#a855f7"};`}
+                    >
                       <Tag
                         name={skill.name}
                         bgColor={skill.bgColor}
@@ -216,6 +219,7 @@ const IconMapper = {
             }
           </ul>
         </section>
+        
         <section class="flex flex-col gap-5">
           <ul class="flex gap-6">
             {
@@ -244,6 +248,15 @@ const IconMapper = {
   </main>
 
   <style>
+    .skill-pill {
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .skill-pill:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 24px color-mix(in srgb, var(--skill-shadow) 42%, transparent);
+    }
+
     .text-gradient {
       background-image: var(--accent-gradient);
       -webkit-background-clip: text;
