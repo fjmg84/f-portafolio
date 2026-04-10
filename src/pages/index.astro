@@ -22,12 +22,13 @@ const IconMapper = {
 };
 
 const categoryLabels: Record<string, string> = {
-  frontend: "Frontend",
-  backend: "Backend",
-  testing: "Testing",
+  core: "Core",
+  "frameworks-libraries": "Frameworks/Libraries",
+  stylized: "Stylized",
+  "backend-tools": "Backend & Tools",
 };
 
-const categoryOrder = ["frontend", "backend", "testing"];
+const categoryOrder = ["core", "frameworks-libraries", "stylized", "backend-tools"];
 
 const groupedSkills = skills.reduce<Record<string, typeof skills>>((acc, skill) => {
   const key = skill.category || "other";

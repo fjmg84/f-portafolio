@@ -29,7 +29,7 @@
       "image": "icon-html5.svg",
       "bgColor": "#f16a30",
       "color": "black",
-      "category": "frontend"
+      "category": "core"
     },
     {
       "id": "css3",
@@ -37,7 +37,7 @@
       "image": "icon-css3.svg",
       "bgColor": "#00AFFF",
       "color": "black",
-      "category": "frontend"
+      "category": "core"
     },
     {
       "id": "sass",
@@ -45,7 +45,7 @@
       "image": "icon-sass.svg",
       "bgColor": "#ce6b9c",
       "color": "black",
-      "category": "frontend"
+      "category": "stylized"
     },
     {
       "id": "styled-components",
@@ -53,7 +53,7 @@
       "image": "style-component.png",
       "bgColor": "#fea4db",
       "color": "black",
-      "category": "frontend"
+      "category": "stylized"
     },
     {
       "id": "tailwind",
@@ -61,7 +61,7 @@
       "image": "icon-tailwind.svg",
       "bgColor": "#3ebff8",
       "color": "black",
-      "category": "frontend"
+      "category": "stylized"
     },
     {
       "id": "javascript",
@@ -69,7 +69,7 @@
       "image": "icon-javascript.svg",
       "bgColor": "#f7e025",
       "color": "black",
-      "category": "frontend"
+      "category": "core"
     },
     {
       "id": "typescript",
@@ -77,7 +77,7 @@
       "image": "icon-typescript.svg",
       "bgColor": "#007ACC",
       "color": "black",
-      "category": "frontend"
+      "category": "core"
     },
     {
       "id": "reactjs",
@@ -85,7 +85,7 @@
       "image": "icon-react.svg",
       "bgColor": "#61DAFB",
       "color": "black",
-      "category": "frontend"
+      "category": "frameworks-libraries"
 
     },
     {
@@ -94,7 +94,7 @@
       "image": "icon-node.svg",
       "bgColor": "#339933",
       "color": "black",
-      "category": "backend"
+      "category": "backend-tools"
     },
     {
       "id": "nextjs",
@@ -102,7 +102,7 @@
       "image": "icon-nextjs.svg",
       "bgColor": "white",
       "color": "black",
-      "category": "frontend"
+      "category": "frameworks-libraries"
     },
     {
       "id": "graphql",
@@ -110,7 +110,7 @@
       "image": "icon-graphql.svg",
       "bgColor": "#E10098",
       "color": "black",
-      "category": "frontend"
+      "category": "backend-tools"
     },
     {
       "id": "materialui",
@@ -118,14 +118,14 @@
       "image": "icon-material-ui.svg",
       "bgColor": "#3399ff",
       "color": "black",
-      "category": "frontend"
+      "category": "stylized"
     },
     {
       "id": "redux",
       "name": "Redux",
       "image": "icon-redux.svg",
       "bgColor": "#764ABC",
-      "category": "frontend"
+      "category": "frameworks-libraries"
     },
     {
       "id": "zustand",
@@ -133,7 +133,7 @@
       "image": "zustand.png",
       "bgColor": "#FFD700",
       "color": "black",
-      "category": "frontend"
+      "category": "frameworks-libraries"
     },
     {
       "id": "prisma",
@@ -141,14 +141,14 @@
       "image": "prisma.png",
       "bgColor": "#0c344b",
       "color": "white",
-      "category": "backend"
+      "category": "backend-tools"
     },
     {
       "id": "jest",
       "name": "Jest",
       "image": "icon-jest.svg",
       "bgColor": "#C21325",
-      "category": "testing"
+      "category": "backend-tools"
     },
     {
       "id": "vitest",
@@ -156,22 +156,30 @@
       "image": "vitest.png",
       "bgColor": "#6e44ff",
       "color": "white",
-      "category": "testing"
+      "category": "backend-tools"
     },
     {
       "id": "astro",
       "name": "Astro",
       "image": "astro.png",
       "bgColor": "#ff5a03",
-      "category": "frontend"
+      "category": "frameworks-libraries"
     },
     {
       "id": "playwright",
       "name": "Playwright",
       "image": "playwright.png",
       "bgColor": "#45ba4b",
-      "category": "testing",
-        "color": "black"
+      "category": "backend-tools",
+      "color": "black"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "image": "git.png",
+      "bgColor": "#f34f29",
+      "category": "backend-tools",
+      "color": "white"
     }
   ],
   "jobs": [
