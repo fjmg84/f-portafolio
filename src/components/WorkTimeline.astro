@@ -1,0 +1,54 @@
+---
+import Text from "./Text.astro";
+
+type WorkItem = {
+  name: string;
+  position: string;
+  description: string;
+  begin?: string;
+  end?: string;
+};
+
+interface Props {
+  items: WorkItem[];
+}
+
+const { items } = Astro.props as Props;
+---
+
+<ul class="relative flex flex-col gap-12 pl-3 md:pl-6">
+  {
+    items.sort((a, b) => {
+      if (a.begin && b.begin) {
+        return new Date(b.begin).getTime() - new Date(a.begin).getTime();
+      }
+      return 0;
+    }).map((item) => {
+      const range = item.begin && item.end ? `${item.begin} - ${item.end}` : null;
+
+
+      return (
+        <li class="relative pl-10 md:pl-14">
+          <div class="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-purple-500/80 via-purple-400/50 to-transparent" />
+
+          <div class={`absolute -left-2 top-1.5 h-4 w-4 rounded-full border-2 border-purple-300 ${item.end === "present" ? "bg-purple-500" : "bg-[#0f0f17]"} shadow-[0_0_0_6px_rgba(126,34,206,0.18)]`} />
+
+          <article class="flex flex-col gap-3 rounded-xl border border-[#2b2b33] bg-[#11111a]/70 p-5 backdrop-blur-sm">
+            {
+              range && (
+                <span class="text-xs font-semibold uppercase tracking-[0.24em] text-purple-300/90">
+                  {range}
+                </span>
+              )
+            }
+
+            <p class="text-2xl font-extrabold text-purple-400">{item.name}</p>
+            <p class="text-lg font-extralight text-purple-300">{item.position}</p>
+            <div class="h-px w-full bg-[#333]" />
+            <Text>{item.description}</Text>
+          </article>
+        </li>
+      );
+    })
+  }
+</ul>

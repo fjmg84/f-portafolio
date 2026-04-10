@@ -13,6 +13,7 @@ import Button from "../components/Button.astro";
 import Threads from "../components/Threads.tsx";
 import TitlePage from "../components/TitlePage.astro";
 import Text from "../components/Text.astro";
+import WorkTimeline from "../components/WorkTimeline.astro";
 
 const IconMapper = {
   gmail: StreamlineGmail,
@@ -118,27 +119,7 @@ const IconMapper = {
 
         <section class="flex flex-col gap-5 md:w-[50%]">
           <TitlePage title="Work Experience" />
-          <ul class="flex flex-col gap-10">
-            {
-              works.map((work) => {
-                return (
-                  <li class="flex flex-col gap-2">
-                    <p class="font-extrabold text-2xl text-purple-400">
-                      {work.name}
-                    </p>
-
-                    <p class="font-extralight text-lg text-purple-300">
-                      {work.position}
-                    </p>
-
-                    <div class="h-[1px] w-full bg-[#333]" />
-
-                    <Text>{work.description}</Text>
-                  </li>
-                );
-              })
-            }
-          </ul>
+          <WorkTimeline items={works} />
         </section>
 
         <section class="flex flex-col gap-5 md:w-[50%]">

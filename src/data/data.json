@@ -3,17 +3,23 @@
     {
       "name": "EMCOMED",
       "position": "Network and Server Administrator | Application Development",
-      "description": "Managed a segmented Linux/Windows infrastructure for 100+ users while also building internal business tools. Delivered PHP/Express/React apps integrated with MSSQL/MySQL, optimized server performance, improved data workflows, and automated repetitive processes."
+      "description": "Managed a segmented Linux/Windows infrastructure for 100+ users while also building internal business tools. Delivered PHP/Express/React apps integrated with MSSQL/MySQL, optimized server performance, improved data workflows, and automated repetitive processes.",
+      "begin": "2014",
+      "end": "2021"
     },
     {
       "name": "DSPOT",
       "position": "Frontend Developer",
-      "description": "Built design-driven interfaces with Next.js and TypeScript, strengthening UI craftsmanship with CSS and Sass. Collaborated closely with design in Figma to translate detailed layouts into polished, production-ready UIs and faster iteration cycles."
+      "description": "Built design-driven interfaces with Next.js and TypeScript, strengthening UI craftsmanship with CSS and Sass. Collaborated closely with design in Figma to translate detailed layouts into polished, production-ready UIs and faster iteration cycles.",
+      "begin": "2021",
+      "end": "2022"
     },
     {
       "name": "TETRAIMPACT",
       "position": "Frontend Developer",
-      "description": "Developed scalable frontend solutions across multiple projects using Next.js, Remix, Material UI, and Prisma. Focused on intuitive UX, performance optimization, and test automation with Jest/Vitest, while improving delivery through modular architecture and process refinements."
+      "description": "Developed scalable frontend solutions across multiple projects using Next.js, Remix, Material UI, and Prisma. Focused on intuitive UX, performance optimization, and test automation with Jest/Vitest, while improving delivery through modular architecture and process refinements.",
+      "begin": "2024",
+      "end": "present"
     }
   ],
   "skills": [
