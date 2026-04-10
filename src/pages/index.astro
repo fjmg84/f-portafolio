@@ -20,6 +20,31 @@ const IconMapper = {
   github: IconGitHub,
   linkedin: FaLinkedin,
 };
+
+const categoryLabels: Record<string, string> = {
+  frontend: "Frontend",
+  backend: "Backend",
+  testing: "Testing",
+};
+
+const categoryOrder = ["frontend", "backend", "testing"];
+
+const groupedSkills = skills.reduce<Record<string, typeof skills>>((acc, skill) => {
+  const key = skill.category || "other";
+  if (!acc[key]) {
+    acc[key] = [];
+  }
+
+  acc[key].push(skill);
+  return acc;
+}, {});
+
+const orderedCategories = [
+  ...categoryOrder.filter((category) => groupedSkills[category]?.length),
+  ...Object.keys(groupedSkills)
+    .filter((category) => !categoryOrder.includes(category))
+    .sort((a, b) => a.localeCompare(b)),
+];
 ---
 
 <Layout title="fjmg84">
@@ -125,26 +150,42 @@ const IconMapper = {
         <section class="flex flex-col gap-5 md:w-[50%]">
           <TitlePage title="Skills" />
 
-          <ul class="flex flex-wrap gap-5 justify-start items-baseline">
+          <div class="flex flex-col gap-8">
             {
-              skills
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map((skill) => {
-                  return (
-                    <li
-                      class="skill-pill text-white cursor-default rounded-lg"
-                      style={`--skill-shadow: ${skill.bgColor || "#a855f7"};`}
-                    >
-                      <Tag
-                        name={skill.name}
-                        bgColor={skill.bgColor}
-                        color={skill.color}
-                      />
-                    </li>
-                  );
-                })
+              orderedCategories.map((category) => {
+                const categorySkills = groupedSkills[category].sort((a, b) =>
+                  a.name.localeCompare(b.name)
+                );
+
+                return (
+                  <section class="skills-category">
+                    <h3 class="skills-category__title">
+                      {categoryLabels[category] || category}
+                    </h3>
+
+                    <ul class="flex flex-wrap gap-5 justify-start items-baseline">
+                      {
+                        categorySkills.map((skill) => {
+                          return (
+                            <li
+                              class="skill-pill text-white cursor-default rounded-lg"
+                              style={`--skill-shadow: ${skill.bgColor || "#a855f7"};`}
+                            >
+                              <Tag
+                                name={skill.name}
+                                bgColor={skill.bgColor}
+                                color={skill.color}
+                              />
+                            </li>
+                          );
+                        })
+                      }
+                    </ul>
+                  </section>
+                );
+              })
             }
-          </ul>
+          </div>
         </section>
 
         <section class="flex flex-col gap-5 md:w-[50%]">
@@ -248,6 +289,21 @@ const IconMapper = {
   </main>
 
   <style>
+    .skills-category {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skills-category__title {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #cfb3ff;
+    }
+
     .skill-pill {
       transition: transform 200ms ease, box-shadow 200ms ease;
     }

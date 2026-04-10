@@ -28,95 +28,150 @@
       "name": "HTML5",
       "image": "icon-html5.svg",
       "bgColor": "#f16a30",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "css3",
       "name": "CSS3",
       "image": "icon-css3.svg",
       "bgColor": "#00AFFF",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "sass",
       "name": "SASS",
       "image": "icon-sass.svg",
       "bgColor": "#ce6b9c",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "styled-components",
       "name": "Styles Component",
       "image": "style-component.png",
       "bgColor": "#fea4db",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "tailwind",
       "name": "Tailwind",
       "image": "icon-tailwind.svg",
       "bgColor": "#3ebff8",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "javascript",
       "name": "JavaScript",
       "image": "icon-javascript.svg",
       "bgColor": "#f7e025",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "typescript",
       "name": "TypeScript",
       "image": "icon-typescript.svg",
-      "bgColor": "#007ACC"
+      "bgColor": "#007ACC",
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "reactjs",
       "name": "ReactJS",
       "image": "icon-react.svg",
       "bgColor": "#61DAFB",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
+
     },
     {
       "id": "nodejs",
       "name": "NodeJS",
       "image": "icon-node.svg",
       "bgColor": "#339933",
-      "color": "black"
+      "color": "black",
+      "category": "backend"
     },
     {
       "id": "nextjs",
       "name": "NextJS",
       "image": "icon-nextjs.svg",
       "bgColor": "white",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "graphql",
       "name": "Graphql",
       "image": "icon-graphql.svg",
-      "bgColor": "#E10098"
+      "bgColor": "#E10098",
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "materialui",
       "name": "MaterialUI",
       "image": "icon-material-ui.svg",
       "bgColor": "#3399ff",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
     },
     {
       "id": "redux",
       "name": "Redux",
       "image": "icon-redux.svg",
-      "bgColor": "#764ABC"
+      "bgColor": "#764ABC",
+      "category": "frontend"
     },
     {
       "id": "zustand",
       "name": "Zustand",
       "image": "zustand.png",
       "bgColor": "#FFD700",
-      "color": "black"
+      "color": "black",
+      "category": "frontend"
+    },
+    {
+      "id": "prisma",
+      "name": "Prisma",
+      "image": "prisma.png",
+      "bgColor": "#0c344b",
+      "color": "white",
+      "category": "backend"
+    },
+    {
+      "id": "jest",
+      "name": "Jest",
+      "image": "icon-jest.svg",
+      "bgColor": "#C21325",
+      "category": "testing"
+    },
+    {
+      "id": "vitest",
+      "name": "Vitest",
+      "image": "vitest.png",
+      "bgColor": "#6e44ff",
+      "color": "white",
+      "category": "testing"
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "image": "astro.png",
+      "bgColor": "#ff5a03",
+      "category": "frontend"
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright",
+      "image": "playwright.png",
+      "bgColor": "#45ba4b",
+      "category": "testing",
+        "color": "black"
     }
   ],
   "jobs": [
