@@ -214,7 +214,7 @@
     },
     {
       "name": "MiEconomia",
-      "description": "It's a website for managing your personal finances with the help of AI that provides reports based on your income and expenses. You can ask it to give you a financial overview and recommendations. It also includes a guide on how to use it correctly.",
+      "description": "It's a website for managing your personal finances with the help of AI that provides reports based on your income and expenses. You can ask it to give you a financial overview and recommendations. It also includes a guide on how to use it correctly.(Actually, it's a project in migration to Next.js, but you can check the repository to see the progress).",
       "tools": [
         "astro",
         "tailwind",
@@ -226,6 +226,13 @@
       ],
       "github": "https://github.com/fjmg84/details-of-my-economy",
       "images": ["MiEconomia/principal.webp"]
+    },
+    {
+      "name": "no-self-recursive-jsx",
+      "description": "ESLint rule that prevents React components from rendering themselves recursively, avoiding infinite loops and unexpected behaviors.",
+      "tools": ["eslint", "javascript"],
+      "github": "https://github.com/fjmg84/no-self-recursive-jsx",
+      "images": ["eslint.png"]
     }
   ],
   "contacts": [
