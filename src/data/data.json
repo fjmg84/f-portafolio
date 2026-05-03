@@ -218,7 +218,7 @@
     {
       "name": "snap-assets",
       "description": "A platform that lets you generate high-quality visual assets—from blog thumbnails to certificates and coupons—simply by filling out a form or using a dynamic API. Choose a template, customize the colors, and download your ready-to-publish PNG.",
-      "tools": ["nextjs", "javascript", "typescript", "tailwind"],
+      "tools": ["nextjs", "javascript", "typescript", "tailwind", "vercel"],
       "github": null,
       "images": ["snap-assets/image.webp"],
       "site": "https://assets.qbacode.com/"
@@ -239,7 +239,8 @@
         "html5",
         "css3",
         "javascript",
-        "typescript"
+        "typescript",
+        "vercel"
       ],
       "site": "https://resources.qbacode.com/",
       "images": ["f-resources/principal.webp"]
