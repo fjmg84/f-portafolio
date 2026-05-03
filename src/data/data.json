@@ -180,6 +180,14 @@
       "bgColor": "#f34f29",
       "category": "backend-tools",
       "color": "white"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "image": "n8n.png",
+      "bgColor": "#222222",
+      "category": "integrations",
+      "color": "white"
     }
   ],
   "jobs": [
