@@ -185,7 +185,31 @@
       "id": "n8n",
       "name": "n8n",
       "image": "n8n.png",
-      "bgColor": "#222222",
+      "bgColor": "#EA4B71",
+      "category": "integrations",
+      "color": "white"
+    }, 
+    {
+      "id": "docker",
+      "name": "Docker",
+      "image": "docker.png",
+      "bgColor": "#2496ED",
+      "category": "integrations",
+      "color": "white"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "image": "vercel.png",
+      "bgColor": "#000000",
+      "category": "integrations",
+      "color": "white"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "image": "cloudflare.png",
+      "bgColor": "#F38020",
       "category": "integrations",
       "color": "white"
     }
