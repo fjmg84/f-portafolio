@@ -7,7 +7,7 @@ import {
 } from "../components/Icons";
 import Layout from "../layouts/Layout.astro";
 
-import { works, skills, jobs, contacts } from "../data/data.json";
+import { works, skills, jobs, contacts, about } from "../data/data.json";
 import Tag from "../components/Tag.astro";
 import Button from "../components/Button.astro";
 import Threads from "../components/Threads.tsx";
@@ -28,17 +28,25 @@ const categoryLabels: Record<string, string> = {
   "backend-tools": "Backend & Tools",
 };
 
-const categoryOrder = ["core", "frameworks-libraries", "stylized", "backend-tools"];
+const categoryOrder = [
+  "core",
+  "frameworks-libraries",
+  "stylized",
+  "backend-tools",
+];
 
-const groupedSkills = skills.reduce<Record<string, typeof skills>>((acc, skill) => {
-  const key = skill.category || "other";
-  if (!acc[key]) {
-    acc[key] = [];
-  }
+const groupedSkills = skills.reduce<Record<string, typeof skills>>(
+  (acc, skill) => {
+    const key = skill.category || "other";
+    if (!acc[key]) {
+      acc[key] = [];
+    }
 
-  acc[key].push(skill);
-  return acc;
-}, {});
+    acc[key].push(skill);
+    return acc;
+  },
+  {},
+);
 
 const orderedCategories = [
   ...categoryOrder.filter((category) => groupedSkills[category]?.length),
@@ -138,8 +146,7 @@ const orderedCategories = [
         <section class="flex flex-col gap-5 md:w-[50%]">
           <TitlePage title="About Me" />
           <Text>
-            Passionate about web design and development, committed to offering
-            innovative and effective solutions for each project.
+            {about}
           </Text>
         </section>
 
@@ -151,13 +158,16 @@ const orderedCategories = [
         <section class="flex flex-col gap-5 md:w-[50%]">
           <TitlePage title="Skills" />
 
-          <Text>Expertise forged in building scalable, production-grade applications using modern industry standards.</Text>
+          <Text
+            >Expertise forged in building scalable, production-grade
+            applications using modern industry standards.</Text
+          >
 
           <div class="flex flex-col gap-8">
             {
               orderedCategories.map((category) => {
                 const categorySkills = groupedSkills[category].sort((a, b) =>
-                  a.name.localeCompare(b.name)
+                  a.name.localeCompare(b.name),
                 );
 
                 return (
@@ -167,22 +177,20 @@ const orderedCategories = [
                     </h3>
 
                     <ul class="flex flex-wrap gap-5 justify-start items-baseline">
-                      {
-                        categorySkills.map((skill) => {
-                          return (
-                            <li
-                              class="skill-pill text-white cursor-default rounded-lg"
-                              style={`--skill-shadow: ${skill.bgColor || "#a855f7"};`}
-                            >
-                              <Tag
-                                name={skill.name}
-                                bgColor={skill.bgColor}
-                                color={skill.color}
-                              />
-                            </li>
-                          );
-                        })
-                      }
+                      {categorySkills.map((skill) => {
+                        return (
+                          <li
+                            class="skill-pill text-white cursor-default rounded-lg"
+                            style={`--skill-shadow: ${skill.bgColor || "#a855f7"};`}
+                          >
+                            <Tag
+                              name={skill.name}
+                              bgColor={skill.bgColor}
+                              color={skill.color}
+                            />
+                          </li>
+                        );
+                      })}
                     </ul>
                   </section>
                 );
@@ -263,7 +271,7 @@ const orderedCategories = [
             }
           </ul>
         </section>
-        
+
         <section class="flex flex-col gap-5">
           <ul class="flex gap-6">
             {
@@ -308,12 +316,15 @@ const orderedCategories = [
     }
 
     .skill-pill {
-      transition: transform 200ms ease, box-shadow 200ms ease;
+      transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
     }
 
     .skill-pill:hover {
       transform: scale(1.02);
-      box-shadow: 0 10px 24px color-mix(in srgb, var(--skill-shadow) 42%, transparent);
+      box-shadow: 0 10px 24px
+        color-mix(in srgb, var(--skill-shadow) 42%, transparent);
     }
 
     .text-gradient {
