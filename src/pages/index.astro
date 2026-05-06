@@ -7,7 +7,14 @@ import {
 } from "../components/Icons";
 import Layout from "../layouts/Layout.astro";
 
-import { works, skills, jobs, contacts, about } from "../data/data.json";
+import {
+  works,
+  skills,
+  jobs,
+  contacts,
+  about,
+  downloadCV,
+} from "../data/data.json";
 import Tag from "../components/Tag.astro";
 import Button from "../components/Button.astro";
 import Threads from "../components/Threads.tsx";
@@ -68,7 +75,7 @@ const orderedCategories = [
           <div class="flex gap-10 items-center flex-wrap">
             <Button
               target="_blank"
-              href="https://drive.google.com/file/d/13_MwxtjOZ34puPlJsCf7n0_XmmaPN5Sy/view?usp=drive_link"
+              href={downloadCV}
               variant
               rel="noopener noreferrer"
               >Download CV in pdf
