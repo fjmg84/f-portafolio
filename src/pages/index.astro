@@ -64,10 +64,12 @@ const orderedCategories = [
 ---
 
 <Layout title="fjmg84">
-  <main class="flex flex-col py-48 relative w-full">
-    <section class="flex flex-col gap-5 justify-center items-center pt-20">
+  <main class="flex flex-col relative w-full">
+    <section
+      class="flex flex-col gap-5 justify-between items-center md:h-screen"
+    >
       <article
-        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10 px-5 md:px-0"
+        class="flex flex-col-reverse items-center md:flex-row-reverse gap-10 md:px-0 h-full"
       >
         <div class="flex flex-col gap-5">
           <h1 class="text-6xl font-extrabold">Hi, I'm Fidel Miranda</h1>
@@ -129,26 +131,54 @@ const orderedCategories = [
           />
         </picture>
       </article>
+
+      <article
+        class="relative bottom-0 left-0 w-full h-[100px] flex overflow-x-hidden bg-purple-500"
+      >
+        <div class="animate-marquee flex whitespace-nowrap gap-4">
+          {
+            Array.from({ length: 5 }).map((_) => {
+              return (
+                <div class="text-white text-6xl rounded-full flex items-center justify-center flex-shrink-0 flex-nowrap">
+                  Frontend Developer
+                </div>
+              );
+            })
+          }
+        </div>
+        <div class="animate-marqueeCopy flex whitespace-nowrap gap-4">
+          {
+            Array.from({ length: 5 }).map((_) => {
+              return (
+                <div class="text-white text-6xl rounded-full flex items-center justify-center flex-shrink-0 flex-nowrap absolute">
+                  Frontend Developer
+                </div>
+              );
+            })
+          }
+        </div>
+      </article>
     </section>
 
-    <div
+    <!-- <div
       style={{
         width: "100%",
         height: "500px",
         position: "relative",
       }}
-    >
-      <Threads
+    > -->
+    <!-- <Threads
         client:load
         amplitude={2}
         distance={0}
         enableMouseInteraction={true}
-      />
-    </div>
+      /> -->
 
-    <div class="px-5 md:px-0">
+    <!-- </div> -->
+
+    <div class="px-5 py-36 md:px-0">
       <div
-        class="flex flex-col gap-y-44 md:gap-y-80 justify-center items-center"
+        class="flex flex-col gap-y-44 md:gap-y-36 justify-center items-center"
       >
         <section class="flex flex-col gap-5 md:w-[50%]">
           <TitlePage title="About Me" />
