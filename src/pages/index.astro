@@ -110,25 +110,25 @@ const MARQUEE_COUNT = 20;
           </div>
         </div>
 
-        <picture class="w-[200px] h-[200px] flex-none relative">
+        <picture class="w-[200px] h-[200px] flex relative">
           <img
             src="/logo.png"
             alt="logo"
-            class="w-full h-full z-20 absolute"
+            class="w-full h-full z-20"
             fetchpriority="high"
             height="500"
             width="auto"
             loading="lazy"
           />
-          <img
-            src="/logo.png"
-            alt="logo"
-            class="w-full h-full absolute blur-xl top-0 z-10"
-            fetchpriority="high"
-            height="500"
-            width="auto"
-            loading="lazy"
-          />
+
+          <div
+            class="absolute transform w-[200px] h-[200px] z-10 bg-cyan-500/40 animate-glow-move rounded-full blur-xl"
+          >
+          </div>
+          <div
+            class="absolute transform w-[200px] h-[200px] z-10 bg-violet-900/40 animate-glow-move-delayed rounded-full blur-xl"
+          >
+          </div>
         </picture>
       </article>
 
@@ -374,6 +374,46 @@ const MARQUEE_COUNT = 20;
       -webkit-text-fill-color: transparent;
       background-size: 400%;
       background-position: 0%;
+    }
+
+    .glow-purple {
+      background: #a855f7;
+      box-shadow:
+        0 0 60px 30px #a855f7,
+        0 0 100px 60px #7c3aed;
+      opacity: 0.6;
+    }
+
+    .glow-cyan {
+      background: #22d3ee;
+      box-shadow:
+        0 0 60px 30px #22d3ee,
+        0 0 100px 60px #06b6d4;
+      opacity: 0.6;
+    }
+
+    @keyframes glowMove {
+      0%,
+      100% {
+        transform: translate(-10px, -10px) scale(1);
+      }
+      25% {
+        transform: translate(10px, -10px) scale(1.1);
+      }
+      50% {
+        transform: translate(10px, 10px) scale(1);
+      }
+      75% {
+        transform: translate(-10px, 10px) scale(1.1);
+      }
+    }
+
+    .animate-glow-move {
+      animation: glowMove 4s ease-in-out infinite;
+    }
+
+    .animate-glow-move-delayed {
+      animation: glowMove 4s ease-in-out infinite 2s;
     }
   </style>
 </Layout>
