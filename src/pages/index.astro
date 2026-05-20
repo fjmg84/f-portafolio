@@ -17,7 +17,6 @@ import {
 } from "../data/data.json";
 import Tag from "../components/Tag.astro";
 import Button from "../components/Button.astro";
-import Threads from "../components/Threads.tsx";
 import TitlePage from "../components/TitlePage.astro";
 import Text from "../components/Text.astro";
 import WorkTimeline from "../components/WorkTimeline.astro";
@@ -161,22 +160,6 @@ const MARQUEE_COUNT = 20;
         </div>
       </article>
     </section>
-
-    <!-- <div
-      style={{
-        width: "100%",
-        height: "500px",
-        position: "relative",
-      }}
-    > -->
-    <!-- <Threads
-        client:load
-        amplitude={2}
-        distance={0}
-        enableMouseInteraction={true}
-      /> -->
-
-    <!-- </div> -->
 
     <div
       class="px-5 py-36 md:px-0 w-full flex flex-col justify-center items-center"
