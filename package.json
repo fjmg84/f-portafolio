@@ -21,7 +21,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "ui-ux-pro-max-cli": "^2.10.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
