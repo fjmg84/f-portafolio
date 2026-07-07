@@ -1,0 +1,32 @@
+---
+import { contacts } from "../data/data.json";
+
+import { StreamlineGmail, IconGitHub, FaLinkedin } from "./Icons";
+
+const IconMapper = {
+  gmail: StreamlineGmail,
+  github: IconGitHub,
+  linkedin: FaLinkedin,
+};
+---
+
+<ul class="flex gap-4">
+  {
+    contacts.map((contact) => {
+      const icon = contact.image as keyof typeof IconMapper;
+      const Component = IconMapper[icon];
+      return (
+        <li>
+          <a
+            href={contact.url}
+            target="_blank"
+            aria-label={contact.label}
+            class="block p-3 rounded-full bg-surface-light border border-white/10 hover:border-accent hover:bg-accent/10 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50"
+          >
+            <Component width={20} height={20} />
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>

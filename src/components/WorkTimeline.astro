@@ -1,62 +1,96 @@
 ---
 import Text from "./Text.astro";
+import TitlePage from "./TitlePage.astro";
 
-type WorkItem = {
-  name: string;
-  position: string;
-  description: string;
-  begin?: string;
-  end?: string;
-};
-
-interface Props {
-  items: WorkItem[];
-}
-
-const { items } = Astro.props as Props;
+import { works } from "../data/data.json";
 ---
 
-<ul class="relative flex flex-col gap-12 md:pl-6">
-  <div
-    aria-hidden="true"
-    class="absolute hidden md:flex bottom-0 left-3 md:left-6 top-0 w-px -translate-x-1/2 bg-gradient-to-t from-purple-500/80 via-purple-400/50 to-transparent"
+<section class="flex flex-col gap-8 reveal">
+  <TitlePage
+    eyebrow="Career"
+    title="Work Experience"
+    subtitle="The roles and teams that shaped the way I build software today."
+  />
+
+  <ol
+    class="relative flex flex-col gap-10 stagger-reveal before:absolute before:top-2 before:bottom-2 before:left-4 before:w-0.5 before:-translate-x-1/2 before:bg-[linear-gradient(to_bottom,rgba(168,85,247,0.7),rgba(168,85,247,0.25),transparent)] md:before:left-20"
   >
-  </div>
+    {
+      works
+        .sort((a, b) => {
+          if (a.begin && b.begin) {
+            return new Date(b.begin).getTime() - new Date(a.begin).getTime();
+          }
+          return 0;
+        })
+        .map((item) => {
+          const isPresent = item.end === "present";
+          const range =
+            item.begin && item.end ? `${item.begin} — ${item.end}` : null;
 
-  {
-    items
-      .sort((a, b) => {
-        if (a.begin && b.begin) {
-          return new Date(b.begin).getTime() - new Date(a.begin).getTime();
-        }
-        return 0;
-      })
-      .map((item) => {
-        const range =
-          item.begin && item.end ? `${item.begin} - ${item.end}` : null;
-
-        return (
-          <li class="relative md:pl-14">
-            <div
-              class={`hidden md:flex absolute left-0 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-purple-300 ${item.end === "present" ? "bg-purple-500" : "bg-[#0f0f17]"} shadow-[0_0_0_6px_rgba(126,34,206,0.18)]`}
-            />
-
-            <article class="flex flex-col gap-3 rounded-xl border border-[#2b2b33] bg-[#11111a]/70 p-5 backdrop-blur-sm">
-              {range && (
-                <span class="text-xs font-semibold uppercase tracking-[0.24em] text-purple-300/90">
-                  {range}
+          return (
+            <li
+              class:list={[
+                "relative grid grid-cols-[24px_1fr] gap-5 items-start group md:grid-cols-[88px_1fr] md:gap-8",
+                isPresent && "is-current",
+              ]}
+            >
+              <div
+                class="relative flex items-center justify-end gap-3 pt-[0.35rem]"
+                aria-hidden="true"
+              >
+                <span
+                  class="hidden text-[0.9rem] font-bold tracking-[0.05em] text-white/40 font-variant-numeric tabular-nums transition-colors duration-[300ms] ease md:inline group-hover:text-white/70"
+                  class:list={[isPresent && "text-accent-soft"]}
+                >
+                  {item.begin}
                 </span>
-              )}
+                <span
+                  class="relative flex-shrink-0 w-4 h-4 rounded-full border-2 border-accent/50 bg-bg transition-all duration-[300ms] ease group-hover:border-accent group-hover:shadow-[0_0_0_4px_rgba(168,85,247,0.12)]"
+                  class:list={[
+                    isPresent &&
+                      "bg-accent border-accent-soft shadow-[0_0_0_4px_rgba(168,85,247,0.18)]",
+                  ]}
+                >
+                  {isPresent && (
+                    <span class="absolute inset-[-2px] rounded-full bg-accent/50 animate-ping" />
+                  )}
+                </span>
+              </div>
 
-              <p class="text-2xl font-extrabold text-purple-400">{item.name}</p>
-              <p class="text-lg font-extralight text-purple-300">
-                {item.position}
-              </p>
-              <div class="h-px w-full bg-[#333]" />
-              <Text>{item.description}</Text>
-            </article>
-          </li>
-        );
-      })
-  }
-</ul>
+              <article
+                class="flex flex-col gap-4 p-6 rounded-[1rem] border border-white/[0.08] bg-[linear-gradient(160deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] transition-all duration-[300ms] ease group-hover:border-accent/30 group-hover:translate-x-1"
+                class:list={[
+                  isPresent &&
+                    "border-accent/35 shadow-[0_20px_50px_-28px_rgba(168,85,247,0.5)]",
+                ]}
+              >
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                  {range && (
+                    <span class="text-[0.72rem] font-semibold tracking-[0.2em] uppercase text-accent-soft/80 font-variant-numeric tabular-nums">
+                      {range}
+                    </span>
+                  )}
+                  {isPresent && (
+                    <span class="inline-flex items-center gap-[0.4rem] px-[0.7rem] py-[0.25rem] text-[0.7rem] font-semibold tracking-[0.08em] uppercase text-accent-soft bg-accent/12 border border-accent/35 rounded-full">
+                      <span class="w-[7px] h-[7px] rounded-full bg-glow-cyan shadow-[0_0_8px_#22d3ee] animate-pulse" />
+                      Currently here
+                    </span>
+                  )}
+                </div>
+
+                <p class="text-xl md:text-2xl font-extrabold text-accent">
+                  {item.name}
+                </p>
+                <p class="text-base md:text-lg font-light text-white/70">
+                  {item.position}
+                </p>
+                <div class="h-px w-full bg-white/10" />
+                <Text>{item.description}</Text>
+              </article>
+            </li>
+          );
+        })
+    }
+  </ol>
+</section>

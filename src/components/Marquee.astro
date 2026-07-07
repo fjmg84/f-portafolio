@@ -1,0 +1,35 @@
+---
+
+import { IconArrowRight } from "../components/Icons";
+
+const MARQUEE_COUNT = 20;
+---
+
+<article
+  class="relative bottom-0 left-0 w-full h-[100px] flex items-center overflow-hidden bg-gradient-to-r from-accent/10 via-accent/20 to-accent/10 backdrop-blur-sm"
+>
+  <div class="animate-marquee flex whitespace-nowrap gap-8">
+    {
+      Array.from({ length: MARQUEE_COUNT }).map((_) => {
+        return (
+          <div class="text-white/70 font-light text-3xl md:text-4xl gap-6 flex items-center flex-shrink-0">
+            <p>Frontend Developer</p>
+            <IconArrowRight />
+          </div>
+        );
+      })
+    }
+  </div>
+  <div class="animate-marqueeCopy flex whitespace-nowrap gap-8">
+    {
+      Array.from({ length: MARQUEE_COUNT }).map((_) => {
+        return (
+          <div class="text-white/70 font-light text-3xl md:text-4xl gap-6 flex items-center flex-shrink-0">
+            <p>Frontend Developer</p>
+            <IconArrowRight />
+          </div>
+        );
+      })
+    }
+  </div>
+</article>

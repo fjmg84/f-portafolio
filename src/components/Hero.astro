@@ -1,0 +1,115 @@
+---
+import { downloadCV } from "../data/data.json";
+import Button from "../components/Button.astro";
+import ContactList from "../components/ContactList.astro";
+import { IconDownload } from "../components/Icons";
+---
+
+<section class="relative h-screen w-full overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+    <div
+      class="absolute top-[-10%] right-[-5%] w-[42vw] h-[42vw] max-w-[600px] max-h-[600px] rounded-full blur-[120px] bg-accent/18"
+    >
+    </div>
+    <div
+      class="absolute bottom-[-15%] left-[-8%] w-[38vw] h-[38vw] max-w-[520px] max-h-[520px] rounded-full blur-[120px] bg-glow-cyan/12"
+    >
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 h-full w-full flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-16 px-5 md:px-0"
+  >
+    <div class="flex flex-col gap-7 max-w-xl text-center md:text-left">
+      <span
+        class="inline-flex items-center gap-[0.55rem] self-center w-fit px-[1.2rem] py-[0.5rem] text-[0.78rem] font-medium tracking-[0.02em] text-white/80 bg-white/[0.04] border border-white/10 rounded-full md:self-start opacity-0 translate-y-6 animate-hero-fade-up"
+        style="animation-delay: 0ms"
+      >
+        <span
+          class="relative w-2 h-2 rounded-full bg-glow-cyan shadow-[0_0_10px_#22d3ee]"
+        >
+          <span class="absolute inset-0 rounded-full bg-glow-cyan animate-ping"
+          ></span>
+        </span>
+        Available for work
+      </span>
+
+      <h1
+        class="flex flex-col gap-[0.2rem] leading-[1.05] opacity-0 translate-y-6 animate-hero-fade-up"
+        style="animation-delay: 90ms"
+      >
+        <span class="text-[1.5rem] font-light text-white/60 tracking-[0.01em]"
+          >Hi, I'm</span
+        >
+        <span
+          class="text-[clamp(3rem,8vw,5rem)] font-extrabold tracking-tight-tight bg-gradient-hero bg-clip-text text-transparent"
+          >Fidel Miranda</span
+        >
+      </h1>
+
+      <p
+        class="inline-flex items-center gap-[0.9rem] justify-center text-[clamp(1.5rem,3.5vw,2.25rem)] font-light tracking-[0.02em] text-accent md:justify-start opacity-0 translate-y-6 animate-hero-fade-up"
+        style="animation-delay: 180ms"
+      >
+        <span
+          class="hidden md:block w-10 h-0.5 rounded-full bg-gradient-bar"
+          aria-hidden="true"></span>
+        Frontend Developer
+      </p>
+
+      <div
+        class="flex gap-6 items-center flex-wrap justify-center md:justify-start opacity-0 translate-y-6 animate-hero-fade-up"
+        style="animation-delay: 270ms"
+      >
+        <Button
+          target="_blank"
+          href={downloadCV}
+          variant
+          rel="noopener noreferrer"
+        >
+          Download CV
+          <IconDownload width={18} height={18} />
+        </Button>
+
+        <ContactList />
+      </div>
+    </div>
+
+    <picture
+      class="w-[180px] h-[180px] md:w-[240px] md:h-[240px] flex relative animate-float opacity-0 animate-hero-fade-in"
+      style="animation-delay: 200ms"
+    >
+      <img
+        src="/logo.png"
+        alt="logo"
+        class="w-full h-full z-20 relative"
+        fetchpriority="high"
+        height="500"
+        width="auto"
+      />
+
+      <div
+        class="absolute inset-0 z-10 bg-glow-cyan/30 rounded-full blur-[72px]"
+      >
+      </div>
+      <div
+        class="absolute inset-0 z-10 bg-glow-violet/30 rounded-full blur-[48px] translate-x-6"
+      >
+      </div>
+    </picture>
+  </div>
+
+  <a
+    href="#content"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden md:block opacity-0 animate-hero-fade-in"
+    style="animation-delay: 600ms"
+    aria-label="Scroll down"
+  >
+    <span
+      class="flex justify-center w-[22px] h-[36px] pt-1.5 border-2 border-white/25 rounded-full transition-colors duration-300 hover:border-accent/60"
+    >
+      <span class="w-[3px] h-2 rounded-full bg-accent animate-scroll-wheel"
+      ></span>
+    </span>
+  </a>
+</section>
