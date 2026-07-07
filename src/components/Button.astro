@@ -5,12 +5,23 @@ const { href, variant = false, ...rest } = Astro.props;
 <a
   href={href}
   class:list={[
-    "flex items-center gap-3 w-fit px-4 py-2 rounded-full transition-colors cursor-pointer",
+    "group relative inline-flex items-center gap-[0.8rem] w-fit px-[2rem] py-[0.8rem] rounded-full font-semibold text-[0.98rem] tracking-[0.01em] cursor-pointer whitespace-nowrap overflow-hidden isolate transition-all duration-[450ms] ease-out focus-visible:outline-none focus-visible:shadow-[0_0_0_3px_rgba(168,85,247,0.5)] active:translate-y-0 active:scale-[0.98]",
     variant
-      ? "border-[1px] border-gray-700 hover:bg-white hover:text-[#333]"
-      : "bg-[#333] hover:bg-white hover:text-[#333]",
+      ? "text-white/90 bg-white/[0.03] border border-white/15 hover:text-white hover:border-transparent hover:shadow-[0_16px_34px_-14px_rgba(168,85,247,0.8)] hover:-translate-y-2"
+      : "text-white border border-transparent shadow-[0_8px_24px_-12px_rgba(168,85,247,0.7)] hover:text-accent hover:border-accent/60 hover:shadow-[0_12px_30px_-16px_rgba(168,85,247,0.6)] hover:-translate-y-2",
   ]}
   {...rest}
 >
-  <slot />
+  <span
+    class:list={[
+      "absolute inset-0 -z-10 bg-gradient-accent transition-opacity duration-[450ms] ease-out",
+      variant
+        ? "opacity-0 group-hover:opacity-100"
+        : "opacity-100 group-hover:opacity-0",
+    ]}></span>
+  <span
+    class="relative z-10 flex items-center gap-[0.8rem] transition-transform duration-[450ms] ease-out group-hover:translate-x-1"
+  >
+    <slot />
+  </span>
 </a>

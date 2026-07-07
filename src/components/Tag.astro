@@ -3,7 +3,7 @@ const { name, bgColor, color } = Astro.props;
 ---
 
 <span
-  class="px-4 py-2 text-sm rounded-full text-nowrap w-fit font-extralight"
+  class="px-4 py-2 text-sm rounded-full text-nowrap w-fit font-extralight transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/50"
   style={`background-color: ${bgColor || "#333"}; color: ${color || "white"};`}
 >
   {name}

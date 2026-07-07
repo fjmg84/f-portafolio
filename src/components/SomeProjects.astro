@@ -1,0 +1,107 @@
+---
+import TitlePage from "./TitlePage.astro";
+import { jobs, skills } from "../data/data.json";
+import Button from "./Button.astro";
+import { IconArrowRight, IconGitHub } from "./Icons";
+---
+
+<section class="flex flex-col gap-8 reveal">
+  <TitlePage
+    eyebrow="Selected Work"
+    title="Some Projects"
+    subtitle="A few projects I've designed, built, and shipped from start to finish."
+  />
+  <ul class="flex flex-col gap-6 stagger-reveal">
+    {
+      jobs.map((job, index) => {
+        const reversed = index % 2 !== 0;
+        return (
+          <li class="peer relative rounded-[1.25rem] border border-white/[0.08] bg-[linear-gradient(100deg_160deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] overflow-hidden transition-all duration-[300ms] ease hover:border-accent/35 hover:-translate-y-1 hover:shadow-[0_24px_60px_-24px_rgba(168,85,247,0.35)]">
+            <div class:list={["grid grid-cols-1 lg:grid-cols-2 gap-0"]}>
+              <div
+                class:list={[
+                  "relative h-[260px] overflow-hidden bg-surface lg:h-full lg:min-h-[340px]",
+                  reversed && "lg:order-2",
+                ]}
+              >
+                <span class="absolute top-4 left-4 z-10 inline-flex items-center justify-center px-[0.6rem] py-[0.3rem] text-[0.75rem] font-bold tracking-[0.1em] text-white bg-bg/60 border border-white/[0.12] rounded-full backdrop-blur-[6px] font-variant-numeric tabular-nums">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <div class="absolute inset-0 bg-[linear-gradient(to_top,rgba(2,6,23,0.55),transparent_55%)] opacity-0 transition-opacity duration-[300ms] ease pointer-events-none peer-hover:opacity-100" />
+                {job.images.map((image) => {
+                  return (
+                    <img
+                      src={image}
+                      alt={job.name}
+                      height="400"
+                      width="auto"
+                      loading="lazy"
+                      class="h-full w-full object-cover transition-transform duration-[700ms] peer-hover:scale-105"
+                    />
+                  );
+                })}
+              </div>
+
+              <div class="flex flex-col justify-between gap-6 p-6 md:p-8">
+                <div class="flex flex-col gap-4">
+                  <h3 class="text-2xl md:text-3xl font-extrabold tracking-tight">
+                    {job.name}
+                  </h3>
+                  <p class="text-white/70 leading-relaxed">{job.description}</p>
+
+                  <div class="flex flex-wrap gap-2 pt-1">
+                    {job.tools
+                      .sort((a, b) => a.localeCompare(b))
+                      .map((tag) => {
+                        const skill = skills.find((s) => s.id === tag);
+                        const techColor =
+                          skill?.bgColor &&
+                          skill.bgColor !== "white" &&
+                          skill.bgColor !== "#000000"
+                            ? skill.bgColor
+                            : "#a855f7";
+                        return (
+                          <span
+                            class="inline-flex items-center gap-[0.45rem] px-[0.7rem] py-[0.3rem] text-[0.78rem] font-light text-white/70 bg-white/[0.04] border border-white/[0.08] rounded-full transition-all duration-[250ms] ease hover:text-white hover:border-[color-mix(in_srgb,var(--tech-color)_50%,transparent)] hover:bg-[color-mix(in_srgb,var(--tech-color)_12%,transparent)]"
+                            style={`--tech-color: ${techColor};`}
+                          >
+                            <span
+                              class="w-[6px] h-[6px] rounded-full"
+                              style={`background: var(--tech-color); box-shadow: 0 0 6px var(--tech-color);`}
+                            />
+                            {skill?.name || tag}
+                          </span>
+                        );
+                      })}
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-4">
+                  {job.github && (
+                    <Button
+                      href={job.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                      <IconGitHub />
+                    </Button>
+                  )}
+                  {job.site && (
+                    <Button
+                      href={job.site}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant
+                    >
+                      View Site <IconArrowRight />
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

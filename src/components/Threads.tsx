@@ -6,6 +6,7 @@ interface ThreadsProps {
   amplitude?: number;
   distance?: number;
   enableMouseInteraction?: boolean;
+  className?: string;
 }
 
 const vertexShader = `
@@ -130,7 +131,7 @@ const Threads: React.FC<ThreadsProps> = ({
   amplitude = 1,
   distance = 0,
   enableMouseInteraction = false,
-  ...rest
+  className,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const animationFrameId = useRef<number>();
@@ -156,7 +157,7 @@ const Threads: React.FC<ThreadsProps> = ({
           value: new Color(
             gl.canvas.width,
             gl.canvas.height,
-            gl.canvas.width / gl.canvas.height
+            gl.canvas.width / gl.canvas.height,
           ),
         },
         uColor: { value: new Color(...color) },
@@ -178,17 +179,21 @@ const Threads: React.FC<ThreadsProps> = ({
     window.addEventListener("resize", resize);
     resize();
 
+    // eslint-disable-next-line prefer-const
     let currentMouse = [0.5, 0.5];
+    // eslint-disable-next-line prefer-const
     let targetMouse = [0.5, 0.5];
 
     function handleMouseMove(e: MouseEvent) {
       const rect = container.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width;
       const y = 1.0 - (e.clientY - rect.top) / rect.height;
-      targetMouse = [x, y];
+      targetMouse[0] = x;
+      targetMouse[1] = y;
     }
     function handleMouseLeave() {
-      targetMouse = [0.5, 0.5];
+      targetMouse[0] = 0.5;
+      targetMouse[1] = 0.5;
     }
     if (enableMouseInteraction) {
       container.addEventListener("mousemove", handleMouseMove);
@@ -228,7 +233,10 @@ const Threads: React.FC<ThreadsProps> = ({
   }, [color, amplitude, distance, enableMouseInteraction]);
 
   return (
-    <div ref={containerRef} className="w-full h-full relative" {...rest} />
+    <div
+      ref={containerRef}
+      className={`w-full h-full relative ${className || ""}`}
+    />
   );
 };
 

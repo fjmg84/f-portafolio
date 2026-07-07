@@ -1,0 +1,89 @@
+---
+import TitlePage from "./TitlePage.astro";
+
+import { about } from "../data/data.json";
+
+const [lead, ...rest] = about.split(". ");
+const leadText = rest.length ? `${lead}.` : lead;
+const bodyText = rest.join(". ");
+---
+
+<section class="flex flex-col gap-8 reveal">
+  <TitlePage
+    eyebrow="About"
+    title="About Me"
+    subtitle="Get to know the developer behind the projects."
+  />
+
+  <article
+    class="relative rounded-[1.25rem] p-[1.5px] overflow-hidden isolate group"
+  >
+    <div
+      class="absolute inset-[-50%] -z-10 bg-gradient-conic opacity-[0.35] transition-opacity duration-[400ms] ease group-hover:opacity-[0.9] animate-spin"
+    >
+    </div>
+    <div
+      class="relative flex flex-col justify-center px-[2rem] py-[2.25rem] rounded-[1.15rem] bg-gradient-card overflow-hidden h-[400px]"
+    >
+      <div class="absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
+        <div
+          class="absolute top-[-60px] right-[-40px] w-[220px] h-[220px] rounded-full blur-[70px] opacity-[0.5] bg-accent/50 animate-float-a"
+        >
+        </div>
+        <div
+          class="absolute bottom-[-80px] left-[-30px] w-[220px] h-[220px] rounded-full blur-[70px] opacity-[0.5] bg-glow-cyan/35 animate-float-b"
+        >
+        </div>
+      </div>
+
+      <span
+        class="text-violet-950 text-[9rem] leading-[0.3] font-extrabold text-accent/12 pointer-events-none select-none"
+        aria-hidden="true">&ldquo;</span
+      >
+
+      <div class="relative z-10 flex items-center gap-3 mb-6">
+        <span
+          class="text-[0.8rem] font-bold tracking-[0.12em] uppercase text-white/85"
+          >Introduction</span
+        >
+      </div>
+
+      <p
+        class="relative z-10 text-[1.35rem] md:text-[1.6rem] leading-[1.55] font-medium text-white max-w-[65ch]"
+      >
+        {leadText}
+      </p>
+      {
+        bodyText && (
+          <p class="relative z-10 mt-[1.1rem] text-base leading-[1.7] font-light text-white/65 max-w-[65ch]">
+            {bodyText}
+          </p>
+        )
+      }
+
+      <div class="relative z-10 flex flex-wrap gap-[0.6rem] mt-[1.75rem]">
+        <span
+          class="inline-flex items-center gap-[0.45rem] px-[0.85rem] py-[0.35rem] text-[0.78rem] font-light text-white/75 bg-white/[0.04] border border-white/[0.08] rounded-full"
+        >
+          <span
+            class="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_8px_#a855f7]"
+          ></span>Frontend
+        </span>
+        <span
+          class="inline-flex items-center gap-[0.45rem] px-[0.85rem] py-[0.35rem] text-[0.78rem] font-light text-white/75 bg-white/[0.04] border border-white/[0.08] rounded-full"
+        >
+          <span
+            class="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_8px_#a855f7]"
+          ></span>Performance
+        </span>
+        <span
+          class="inline-flex items-center gap-[0.45rem] px-[0.85rem] py-[0.35rem] text-[0.78rem] font-light text-white/75 bg-white/[0.04] border border-white/[0.08] rounded-full"
+        >
+          <span
+            class="w-[6px] h-[6px] rounded-full bg-accent shadow-[0_0_8px_#a855f7]"
+          ></span>Testing
+        </span>
+      </div>
+    </div>
+  </article>
+</section>
