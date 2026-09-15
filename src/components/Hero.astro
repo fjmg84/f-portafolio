@@ -54,7 +54,9 @@ import { IconDownload } from "../components/Icons";
         <span
           class="hidden md:block w-10 h-0.5 rounded-full bg-gradient-bar"
           aria-hidden="true"></span>
-        Frontend Developer
+        <span class="whitespace-nowrap">
+          <span id="hero-role-word" class="inline-block">Frontend</span> Developer
+        </span>
       </p>
 
       <div
@@ -113,3 +115,74 @@ import { IconDownload } from "../components/Icons";
     </span>
   </a>
 </section>
+
+<script>
+  import gsap from "gsap";
+
+  const word = document.getElementById("hero-role-word");
+  const WORDS = ["Frontend", "Backend", "FullStack"];
+  const LAST = WORDS.length - 1;
+
+  if (word) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      word.textContent = WORDS[LAST];
+      word.classList.add("role-final");
+    } else {
+      let index = 0;
+      const flip = () => {
+        gsap.to(word, {
+          yPercent: -40,
+          opacity: 0,
+          rotateX: -80,
+          duration: 0.3,
+          ease: "power2.in",
+          transformPerspective: 500,
+          onComplete: () => {
+            index += 1;
+            word.textContent = WORDS[index];
+            if (index === LAST) word.classList.add("role-final");
+            gsap.fromTo(
+              word,
+              { yPercent: 40, opacity: 0, rotateX: 80 },
+              {
+                yPercent: 0,
+                opacity: 1,
+                rotateX: 0,
+                duration: 0.4,
+                ease: "power2.out",
+                transformPerspective: 500,
+              }
+            );
+          },
+        });
+      };
+
+      setTimeout(function tick() {
+        if (index < LAST) {
+          flip();
+          setTimeout(tick, 1200);
+        }
+      }, 1200);
+    }
+  }
+</script>
+
+<style>
+  .role-final {
+    background: linear-gradient(120deg, #ffffff 0%, #c4b5fd 45%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: role-glow 2.6s ease-in-out infinite;
+  }
+
+  @keyframes role-glow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 18px rgba(168, 85, 247, 0.55));
+    }
+  }
+</style>
